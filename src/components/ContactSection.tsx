@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Mail, MapPin, Phone, ChevronDown, Check, Loader2 } from 'lucide-react';
+import { Send, Mail, MapPin, Phone, ChevronDown, Check, Loader2, Linkedin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 import { sendEmail } from '../utils/sendEmail';
 
@@ -55,7 +55,7 @@ const ContactSection: React.FC = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-900">Email Us</h4>
-                                    <a href="mailto:info@rospand.com" className="text-gray-600 hover:text-brand-blue transition-colors">info@rospand.com</a>
+                                    <a href="mailto:rospandglobal27@gmail.com" className="text-gray-600 hover:text-brand-blue transition-colors">rospandglobal27@gmail.com</a>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
@@ -64,7 +64,7 @@ const ContactSection: React.FC = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-900">Call Us</h4>
-                                    <a href="tel:+1234567890" className="text-gray-600 hover:text-brand-orange transition-colors">+91 91234 56789</a>
+                                    <a href="tel:+918421148095" className="text-gray-600 hover:text-brand-orange transition-colors">+91 8421148095</a>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
@@ -75,6 +75,58 @@ const ContactSection: React.FC = () => {
                                     <h4 className="font-semibold text-gray-900">Visit Us</h4>
                                     <p className="text-gray-600">Nagpur, India (IT Hub)<br />Dubai, UAE<br />United States</p>
                                 </div>
+                            </div>
+                        </div>
+
+                        {/* Social Links */}
+                        <div className="pt-4">
+                            <h4 className="font-semibold text-gray-900 mb-4">Follow Us</h4>
+                            <div className="flex items-center gap-3">
+                                <a 
+                                    href="https://linkedin.com/company/rospand" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="p-3 bg-blue-50 rounded-lg text-blue-600 border border-blue-200 hover:bg-blue-100 hover:border-blue-300 transition-all hover:scale-110"
+                                    aria-label="LinkedIn"
+                                >
+                                    <Linkedin className="w-5 h-5" />
+                                </a>
+                                <a 
+                                    href="https://facebook.com/rospand" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="p-3 bg-blue-50 rounded-lg text-blue-600 border border-blue-200 hover:bg-blue-100 hover:border-blue-300 transition-all hover:scale-110"
+                                    aria-label="Facebook"
+                                >
+                                    <Facebook className="w-5 h-5" />
+                                </a>
+                                <a 
+                                    href="https://twitter.com/rospand" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="p-3 bg-sky-50 rounded-lg text-sky-600 border border-sky-200 hover:bg-sky-100 hover:border-sky-300 transition-all hover:scale-110"
+                                    aria-label="Twitter"
+                                >
+                                    <Twitter className="w-5 h-5" />
+                                </a>
+                                <a 
+                                    href="https://instagram.com/rospand" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="p-3 bg-pink-50 rounded-lg text-pink-600 border border-pink-200 hover:bg-pink-100 hover:border-pink-300 transition-all hover:scale-110"
+                                    aria-label="Instagram"
+                                >
+                                    <Instagram className="w-5 h-5" />
+                                </a>
+                                <a 
+                                    href="https://youtube.com/@rospand" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="p-3 bg-red-50 rounded-lg text-red-600 border border-red-200 hover:bg-red-100 hover:border-red-300 transition-all hover:scale-110"
+                                    aria-label="YouTube"
+                                >
+                                    <Youtube className="w-5 h-5" />
+                                </a>
                             </div>
                         </div>
                     </div>
