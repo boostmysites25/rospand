@@ -17,7 +17,7 @@ Message: ${data.message}
     body: formattedBody,
     name: "Rospand Global Techno Services Pvt.Ltd",
     subject: `New Lead: ${data.name} - ${data.subject || 'Inquiry'}`,
-    to: 'mpranavprem@gmail.com'
+    to: 'rospandglobal27@gmail.com'
   };
 
   try {
