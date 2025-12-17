@@ -62,9 +62,10 @@ const ContactSection: React.FC = () => {
                                 <div className="p-3 bg-brand-orange/10 rounded-lg text-brand-orange border border-brand-orange/20">
                                     <Phone className="w-6 h-6" />
                                 </div>
-                                <div>
+                                <div className='flex flex-col'>
                                     <h4 className="font-semibold text-gray-900">Call Us</h4>
-                                    <a href="tel:+918421148095" className="text-gray-600 hover:text-brand-orange transition-colors">+91 8421148095</a>
+                                    <a href="tel:+918421148095" className="text-gray-600 hover:text-brand-orange transition-colors mb-1">+91 8421148095</a>
+                                    <a href="tel:+918668622470" className="text-gray-600 hover:text-brand-orange transition-colors">+91 8668622470</a>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">

@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
                             <li>Dubai, UAE</li>
                             <li>USA</li>
                             <li>Nagpur, India</li>
-                            <li>info@rospand.com</li>
+                            <li>rospandglobal27@gmail.com</li>
                         </ul>
                     </div>
                 </div>

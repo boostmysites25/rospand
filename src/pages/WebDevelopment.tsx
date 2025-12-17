@@ -8,6 +8,7 @@ import PortfolioSection from '../components/PortfolioSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import CTASection from '../components/CTASection';
 import ContactSection from '../components/ContactSection';
+import SEO from '../components/SEO';
 
 const WebDevelopment: React.FC = () => {
     const webProjects = [
@@ -48,8 +49,90 @@ const WebDevelopment: React.FC = () => {
         }
     ];
 
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Web Development",
+        "provider": {
+            "@type": "Organization",
+            "name": "Rospand Global Techno Services Pvt. Ltd.",
+            "url": "https://rospand.com",
+            "logo": "https://rospand.com/brand_logo_1_abstract_tech_1765616154053.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-8421148095",
+                "contactType": "Customer Service",
+                "email": "rospandglobal27@gmail.com",
+                "areaServed": ["IN", "AE", "US"],
+                "availableLanguage": "English"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Nagpur",
+                "addressRegion": "Maharashtra",
+                "addressCountry": "IN"
+            },
+            "sameAs": [
+                "https://linkedin.com/company/rospand",
+                "https://facebook.com/rospand",
+                "https://twitter.com/rospand",
+                "https://instagram.com/rospand"
+            ]
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": ["India", "United Arab Emirates", "United States"]
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Web Development Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "React & Next.js Development",
+                        "description": "Server-side rendering and static generation for speed and SEO"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Progressive Web Apps",
+                        "description": "Offline capable, installable web experiences"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "E-Commerce Development",
+                        "description": "Custom storefronts with secure payment gateway integrations"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Backend & Cloud Services",
+                        "description": "Scalable microservices architecture deployed on AWS, Azure, or Google Cloud"
+                    }
+                }
+            ]
+        }
+    };
+
     return (
         <Layout>
+            <SEO
+                title="Web Development Services"
+                description="Building the future of the web with scalable, responsive, and blazing fast applications. Expert React, Next.js, e-commerce, and cloud-native solutions. Progressive Web Apps and modern web development services."
+                keywords="web development, React development, Next.js development, e-commerce development, PWA development, backend development, cloud services, web application development, responsive web design, full stack development"
+                image="https://rospand.com/web_dev_hero_futuristic_1765614457714.png"
+                url="https://rospand.com/web-development"
+                structuredData={structuredData}
+            />
             <Hero
                 title="Next-Gen Web Solutions"
                 subtitle="Building the future of the web with scalable, responsive, and blazing fast applications."
