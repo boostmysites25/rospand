@@ -13,8 +13,8 @@
 </head>
 
 <body>
-     <!-- Top Bar -->
-     <div id="navbar"></div>
+    <!-- Top Bar -->
+    <div id="navbar"></div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Wait until the navbar is fetched and added to the DOM
@@ -22,11 +22,11 @@
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('navbar').innerHTML = data;
-        
+
                     // Add active class after navbar is loaded
                     const navLinks = document.querySelectorAll("header nav a");
                     const currentPath = window.location.pathname;
-        
+
                     navLinks.forEach(link => {
                         if (link.getAttribute("href") === currentPath || link.getAttribute("href") === currentPath.split('/').pop()) {
                             link.classList.add("active");
@@ -34,7 +34,7 @@
                     });
                 });
         });
-        
+
     </script>
     <main>
         <div class="hero-section">
@@ -52,11 +52,12 @@
                         <img src="../../../../../../../../images/BPO.jpg" alt="BPO Services">
                         <div class="description">
                             <h3>BPO</h3>
-                            <p>Streamline business operations with our reliable Business Process Outsourcing solutions.</p>
+                            <p>Streamline business operations with our reliable Business Process Outsourcing solutions.
+                            </p>
                         </div>
                     </a>
                 </div>
-        
+
                 <!-- IT Services -->
                 <div class="service">
                     <a href="../../../../../../../../IT_services/IT/it.html">
@@ -67,7 +68,7 @@
                         </div>
                     </a>
                 </div>
-        
+
                 <!-- Software Development -->
                 <div class="service">
                     <a href="../../../../../../../../IT_services/Soft_developement/software-development.html">
@@ -78,9 +79,31 @@
                         </div>
                     </a>
                 </div>
+
+                <!-- Web Development -->
+                <div class="service">
+                    <a href="../../../../../../../../IT_services/Web_development/web-development.html">
+                        <img src="../../../../../../../../images/Web development.png" alt="Web Development">
+                        <div class="description">
+                            <h3>Web Development</h3>
+                            <p>Innovative and responsive websites designed to create a powerful online presence.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- App Development -->
+                <div class="service">
+                    <a href="../../../../../../../../IT_services/App_development/app-development.html">
+                        <img src="../../../../../../../../images/App development.png" alt="App Development">
+                        <div class="description">
+                            <h3>App Development</h3>
+                            <p>User-friendly mobile applications built to engage your audience and grow your brand.</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
-        
+
     </main>
     <a href="https://wa.me/918421148095" target="_blank" class="whatsapp">
         <i class="fa-brands fa-whatsapp"></i></a>
