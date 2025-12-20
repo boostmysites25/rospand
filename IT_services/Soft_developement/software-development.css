@@ -1,0 +1,254 @@
+﻿/* General Page Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;0,900;1,100;1,200;1,300;1,400;1,800;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #fbe9d0;
+}
+
+/* Video Background Section */
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.overlay-text p {
+    display: inline;
+    font-size: 4vw;
+}
+
+.typing {
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    border-right: 4px solid white;
+    white-space: nowrap;
+    animation: typing 4s steps(16) 1s 1 normal both, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Services Section */
+.services {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 4vw;
+    color: #244455;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.service-list {
+    list-style: none;
+    padding: 20px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    border-radius: 8px;
+}
+
+.service-list li {
+    background-color: #874f41;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease;
+}
+
+.service-list li:hover {
+    transform: translateY(-5px);
+}
+
+.service-list li i {
+    font-size: 32px;
+    color: white;
+}
+
+/* New Section: Software Development Info */
+.software-info {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbe9d0;
+}
+
+.software-info .content {
+    max-width: 1200px;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.software-info .text-content {
+    flex: 1 1 100%;
+    padding: 20px;
+    color: #244455;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.software-info .text-content h2 {
+    font-size: 32px;
+    color: #874f41;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.software-info .video-content {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.software-info .video-content video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Description Section */
+.des {
+    padding: 20px;
+    background-color: #874f41;
+    color: white;
+    text-align: center;
+}
+
+.last {
+    text-align: center;
+}
+
+.last img {
+    height: 100%;
+    max-width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+
+    .services p {
+        font-size: 5vw;
+    }
+
+    .service-list li {
+        font-size: 16px;
+    }
+
+    .software-info .text-content h2 {
+        font-size: 28px;
+    }
+
+    .software-info .text-content {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .overlay-text {
+        font-size: 30px;
+    }
+
+    .service-list li {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .software-info .text-content h2 {
+        font-size: 24px;
+    }
+
+    .software-info .text-content {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-text {
+        font-size: 24px;
+    }
+
+    .service-list li {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .software-info .text-content h2 {
+        font-size: 20px;
+    }
+
+    .software-info .text-content {
+        font-size: 12px;
+    }
+
+    .last img {
+        height: auto;
+        width: 100%;
+    }
+}
+.whatsapp {
+            font-size: 50px; /* Increase icon size */
+            color: #25D366; /* WhatsApp green */
+            text-decoration: none; /* Remove underline */
+            position: fixed;
+            bottom: 90px;
+            right: 35px;
+        }
+
+        .whatsapp:hover {
+            color: #1ebe5d; /* Slightly darker green on hover*/
+}

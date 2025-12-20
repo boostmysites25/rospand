@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rospand Global</title>
+    <link rel="icon" type="image/x-icon" href="../../../../../../../../images/logo.png">
+    <link rel="stylesheet" href="itbpo-services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+     <!-- Top Bar -->
+     <div id="navbar"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait until the navbar is fetched and added to the DOM
+            fetch('/Nav_bar/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+        
+                    // Add active class after navbar is loaded
+                    const navLinks = document.querySelectorAll("header nav a");
+                    const currentPath = window.location.pathname;
+        
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPath || link.getAttribute("href") === currentPath.split('/').pop()) {
+                            link.classList.add("active");
+                        }
+                    });
+                });
+        });
+        
+    </script>
+    <main>
+        <div class="hero-section">
+            <div class="hero-text">
+                <h1>IT SERVICES AND BPO</h1>
+                <p>Delivering cutting-edge IT solutions and seamless BPO services to empower your business.</p>
+            </div>
+        </div>
+        <section class="content">
+            <h2>Our Expertise</h2>
+            <div class="services">
+                <!-- BPO -->
+                <div class="service">
+                    <a href="../../../../../../../../IT_services/BPO/bpo.html">
+                        <img src="../../../../../../../../images/BPO.jpg" alt="BPO Services">
+                        <div class="description">
+                            <h3>BPO</h3>
+                            <p>Streamline business operations with our reliable Business Process Outsourcing solutions.</p>
+                        </div>
+                    </a>
+                </div>
+        
+                <!-- IT Services -->
+                <div class="service">
+                    <a href="../../../../../../../../IT_services/IT/it.html">
+                        <img src="../../../../../../../../images/IT services.jpg" alt="IT Services">
+                        <div class="description">
+                            <h3>IT Services</h3>
+                            <p>Comprehensive IT solutions to enhance your business efficiency and innovation.</p>
+                        </div>
+                    </a>
+                </div>
+        
+                <!-- Software Development -->
+                <div class="service">
+                    <a href="../../../../../../../../IT_services/Soft_developement/software-development.html">
+                        <img src="../../../../../../../../images/Software development.jpg" alt="Software Development">
+                        <div class="description">
+                            <h3>Software Development</h3>
+                            <p>Custom-built software tailored to meet your unique business needs and challenges.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <a href="https://wa.me/918421148095" target="_blank" class="whatsapp">
+        <i class="fa-brands fa-whatsapp"></i></a>
+    <div id="footercontent"></div>
+    <script>
+        // Load footer dynamically
+        function loadFooter() {
+            fetch('/Footer/footer.html') // Update path as needed
+                .then((response) => response.text())
+                .then((footerHTML) => {
+                    document.getElementById('footercontent').innerHTML = footerHTML;
+                })
+                .catch((error) => console.error('Error loading footer:', error));
+        }
+
+        // Call the function to load the footer
+        loadFooter();
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <script src="../../../../../../../../tawk.to/chat.js"></script>
+</body>
+
+</html>

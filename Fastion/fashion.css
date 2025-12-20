@@ -1,0 +1,183 @@
+﻿/* Reset default margin and padding */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;0,900;1,100;1,200;1,300;1,400;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;   
+}
+html, body {
+    background-color: #fbe9d0;
+}
+
+/* Fashion Background Section */
+.fashionbg {
+    position: relative;
+    background-image: url('../../../../../../../../images/4e3e6e28-670e-4813-b51a-0da5f077f2cb.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin-top: 60px; 
+    padding: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem; 
+    font-weight: bold;
+}
+
+.fashionbg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(49, 12, 3, 0.6); 
+    z-index: 1; 
+}
+
+.fashionbg .intro {
+    position: relative;
+    z-index: 2; 
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 10px 0 0 0;
+    color: white;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    background-color: #fbe9d0;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+main .intro {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+    font-style: italic;
+}
+
+/* Fashion Sections */
+.fashion-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Row */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+}
+
+/* Section */
+.section {
+    text-align: left;
+    flex: 1;
+    min-width: 280px; /* Minimum width for smaller devices */
+    max-width: 30%; /* Maintain design for larger screens */
+    box-sizing: border-box;
+}
+
+/* Image Responsiveness */
+.section .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.3s ease;
+}
+
+.section .image img:hover {
+    transform: rotate(5deg) scale(1.05);
+    filter: brightness(1.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.section .description {
+    text-align: left;
+}
+
+.section .description p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.section .description .quote {
+    font-style: italic;
+    color: #874f41;
+}
+
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .row {
+        flex-wrap: wrap; /* Allow wrapping for better layout */
+    }
+
+    .section {
+        max-width: 45%; /* Adjust width to display two items per row */
+        flex: 1 1 45%;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .section {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    main h1 {
+        font-size: 1.8rem;
+    }
+
+    .fashionbg {
+        height: 50vh; /* Adjust height for smaller screens */
+    }
+
+    .fashionbg .intro {
+        font-size: 1.2rem;
+    }
+}
+.whatsapp {
+            font-size: 50px; /* Increase icon size */
+            color: #25D366; /* WhatsApp green */
+            text-decoration: none; /* Remove underline */
+            position: fixed;
+            bottom: 90px;
+            right: 35px;
+        }
+
+        .whatsapp:hover {
+            color: #1ebe5d; /* Slightly darker green on hover*/
+}

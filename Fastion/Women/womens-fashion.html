@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rospand Global</title>
+    <link rel="icon" type="image/x-icon" href="../../../../../../../../../images/logo.png">
+    <link rel="stylesheet" href="womens-fashion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    
+    <div id="navbar"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait until the navbar is fetched and added to the DOM
+            fetch('/Nav_bar/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+        
+                    // Add active class after navbar is loaded
+                    const navLinks = document.querySelectorAll("header nav a");
+                    const currentPath = window.location.pathname;
+        
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPath || link.getAttribute("href") === currentPath.split('/').pop()) {
+                            link.classList.add("active");
+                        }
+                    });
+                });
+        });
+        
+    </script>
+    <main>
+        <!-- Video Section -->
+        <div class="video-container">
+            <video autoplay loop muted class="background-video">
+                <source src="../../../../../../../../../images/womenbg.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="text-overlay">
+                <p>"Elegance is not standing out, but being remembered." – **Giorgio Armani**</p>
+            </div>
+        </div>
+
+        <!-- Quote Section -->
+        <div class="quote-container">
+            <p>Explore the elegance and diversity of women's fashion, curated to enhance your style and confidence.</p>
+        </div>
+
+      <!-- Categories Section -->
+      <div class="categories-section">
+        <h2>Explore Our Women's Clothing Categories</h2>
+        <div class="categories-grid">
+            <!-- Row 1 -->
+            <div class="category">
+                <img src="../../../../../../../../../images/w1.jpg" alt="Casual Wear">
+                <p>Casual Wear</p>
+            </div>
+            <div class="category">
+                <img src="../../../../../../../../../images/w2.jpg" alt="Formal Wear">
+                <p>Formal Wear</p>
+            </div>
+            <div class="category">
+                <img src="../../../../../../../../../images/w3.jpg" alt="Sportswear">
+                <p>Sportswear</p>
+            </div>
+            <div class="category">
+                <img src="../../../../../../../../../images/w4.jpg" alt="Traditional Wear">
+                <p>Traditional Wear</p>
+            </div>
+            <!-- Row 2 -->
+            <div class="category">
+                <img src="../../../../../../../../../images/w5.jpg" alt="Party Wear">
+                <p>Party Wear</p>
+            </div>
+            <div class="category">
+                <img src="../../../../../../../../../images/w6.jpg" alt="Outerwear">
+                <p>Outerwear</p>
+            </div>
+            <div class="category">
+                <img src="../../../../../../../../../images/w7.jpg" alt="Ethnic Wear">
+                <p>Ethnic Wear</p>
+            </div>
+            <div class="category">
+                <img src="../../../../../../../../../images/w8.jpg" alt="Business Casual">
+                <p>Business Casual</p>
+            </div>
+            <!-- Row 3 -->
+            <div class="category">
+                <img src="../../../../../../../../../images/w9.jpg" alt="Beach Wear">
+                <p>Beach Wear</p>
+            </div>
+            <div class="category">
+                <img src="../../../../../../../../../images/w10.jpg" alt="Workwear">
+                <p>Workwear</p>
+            </div>
+            <div class="category">
+                <img src="../../../../../../../../../images/w11.jpg" alt="Loungewear">
+                <p>Loungewear</p>
+            </div>
+            <div class="category">
+                <img src="../../../../../../../../../images/w12.jpg" alt="Activewear">
+                <p>Activewear</p>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+    <div id="footercontent"></div>
+    <script>
+        // Load footer dynamically
+        function loadFooter() {
+            fetch('/Footer/footer.html') // Update path as needed
+                .then((response) => response.text())
+                .then((footerHTML) => {
+                    document.getElementById('footercontent').innerHTML = footerHTML;
+                })
+                .catch((error) => console.error('Error loading footer:', error));
+        }
+
+        // Call the function to load the footer
+        loadFooter();
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <script src="../../../../../../../../../tawk.to/chat.js"></script>
+</body>
+
+</html>

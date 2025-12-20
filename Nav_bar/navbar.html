@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../../../../../../../Nav_bar/style.css">
+    <script src="https://kit.fontawesome.com/69bdda46f6.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-navbar">
+        <div class="logo-section">
+            <img src="../../../../../../../../images/logo.png" alt="Rospand Logo" class="logo">
+            <h1 class="company-name"> Rospand Global Techno Services Pvt Ltd</h1>
+        </div>
+        <div class="contact-section">
+            <div class="detail">For enquiry connect us : </div>
+            <div class="detail">
+                <div class="contact-row">
+                    <i class="fa-solid fa-phone"></i> +91 7758848095, +91 8421148095 <i
+                        class="fa-solid fa-envelope"></i>
+                    <a href="mailto:admin@rospand.com">admin@rospand.com</a>
+                </div>
+            </div>
+        </div>
+        <div class=" social-media-icons">
+            <a href="https://www.facebook.com/share/18R8FAHpWG/?mibextid=LQQJ4d" target="_blank">
+                <img src="../../../../../../../../images/facebook.png" alt="Facebook Icon">
+            </a>
+            <a href="https://www.instagram.com/_rospand?igsh=MWU4Z3RiYXR6bGk0MA%3D%3D&utm_source=qr" target="_blank">
+                <img src="../../../../../../../../images/instagram.png" alt="Instagram Icon">
+            </a>
+            <a href="https://www.linkedin.com/company/rospand-global-techno-services-private-limited/" target="_blank">
+                <img src="../../../../../../../../images/linkdin.png" alt="LinkedIn Icon">
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+
+    <div class="topnav" id="myTopnav">
+        <a href="https://www.rospand.com/index.html">Home</a>
+        <a href="https://www.rospand.com/About_us/about.html">About Us</a>
+        <a href="https://www.rospand.com/Fastion/fashion.html">Fashion</a>
+        <a href="https://www.rospand.com/Agro_product/agro.html">Agro</a>
+        <a href="https://www.rospand.com/IT_services/itbpo-services.html">IT Services</a>
+        <a href="https://www.rospand.com/Contact_us/contact.html">Contact</a>
+        <a href="https://www.rospand.com/Branches/branches.html">Branches</a>
+        <a href="../../../../../../../../blogy-master/index.html">Blog</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <script>
+        const activepage = window.location.pathname;
+        console.log(activepage);
+
+        const navlinks = document.querySelectorAll('.topnav a');
+        navlinks.forEach(link => {
+            if (link.href.includes(`${activepage}`)) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,157 @@
+﻿/* Reset default margin and padding */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;0,900;1,100;1,200;1,300;1,400;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;   
+}
+html, body {
+    background-color: #fbe9d0;
+}
+
+/* Style for video container */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 700px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the container */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px;
+    width: 250px;
+}
+
+/* Quote container styles */
+.quote-container {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Categories Section */
+.categories-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.categories-section h2 {
+    font-size: 2rem;
+    color: #244455;
+    margin-bottom: 20px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.category {
+    text-align: center;
+    background-color: #fbe9d0;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category img {
+    width: 100%; /* Ensures images scale to fit the container */
+    max-width: 300px; /* Increase the width for larger images */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto 10px; /* Center image and add spacing */
+    border-radius: 5px;
+}
+
+.category p {
+    font-size: 1.2rem;
+    color: #244455;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #244455;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+
+/* Tablets (Width: 768px and up) */
+@media (max-width: 1024px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr); /* Adjust grid to 2 columns */
+        gap: 15px;
+    }
+
+    .text-overlay {
+        font-size: 1.5rem; /* Adjust text size */
+    }
+
+    .categories-section h2 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+}
+
+/* Mobile Devices (Width: 767px and below) */
+@media (max-width: 767px) {
+    .video-container {
+        height: 400px; /* Adjust video container height */
+    }
+
+    .text-overlay {
+        font-size: 1.2rem; /* Further reduce text size */
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 10px;
+    }
+
+    .category img {
+        max-width: 100%; /* Ensure images fit smaller screens */
+    }
+
+    .categories-section h2 {
+        font-size: 1.5rem; /* Reduce heading size */
+    }
+
+    .quote-container {
+        font-size: 18px; /* Reduce font size for the quote */
+        padding: 10px;
+    }
+}

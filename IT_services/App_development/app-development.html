@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Development - Rospand Global</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../images/logo.png">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" href="../../Nav_bar/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+    <!-- Navbar Inlined for Local View -->
+    <div class="top-navbar">
+        <div class="logo-section">
+            <img src="../../images/logo.png" alt="Rospand Logo" class="logo">
+            <h1 class="company-name"> Rospand Global Techno Services Pvt Ltd</h1>
+        </div>
+        <div class="contact-section">
+            <div class="detail">For enquiry connect us : </div>
+            <div class="detail">
+                <div class="contact-row">
+                    <i class="fa-solid fa-phone"></i> +91 7758848095, +91 8421148095 <i
+                        class="fa-solid fa-envelope"></i>
+                    <a href="mailto:admin@rospand.com">admin@rospand.com</a>
+                </div>
+            </div>
+        </div>
+        <div class=" social-media-icons">
+            <a href="https://www.facebook.com/share/18R8FAHpWG/?mibextid=LQQJ4d" target="_blank">
+                <img src="../../images/facebook.png" alt="Facebook Icon">
+            </a>
+            <a href="https://www.instagram.com/_rospand?igsh=MWU4Z3RiYXR6bGk0MA%3D%3D&utm_source=qr" target="_blank">
+                <img src="../../images/instagram.png" alt="Instagram Icon">
+            </a>
+            <a href="https://www.linkedin.com/company/rospand-global-techno-services-private-limited/" target="_blank">
+                <img src="../../images/linkdin.png" alt="LinkedIn Icon">
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="topnav" id="myTopnav">
+        <a href="../../index.html">Home</a>
+        <a href="#services-section">Our Expertise</a>
+        <a href="#quality-section">Why Us</a>
+        <a href="#tech-stack-section">Tech Stack</a>
+        <a href="#process-section">Process</a>
+        <a href="#contact-form-section">Contact</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero-section">
+        <div class="video-overlay"></div>
+        <video autoplay muted loop class="hero-video">
+            <source src="../../images/software.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>Transform Your Business with <span class="highlight">Mobile Apps</span></h1>
+            <p>We build high-performance, scalable, and secure mobile applications for iOS and Android.</p>
+            <a href="#contact-form-section" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services-section">
+        <div class="container">
+            <h2 class="section-title">Our Expertise</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fab fa-apple"></i>
+                    <h3>iOS Development</h3>
+                    <p>Native iOS applications built with Swift and Objective-C for the Apple ecosystem.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fab fa-android"></i>
+                    <h3>Android Development</h3>
+                    <p>Robust Android apps tailored for the widest range of devices using Kotlin and Java.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Cross-Platform</h3>
+                    <p>Cost-effective solutions using React Native and Flutter for both iOS and Android.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-pencil-ruler"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Intuitive and engaging user interfaces designed to provide the best user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Quality Section -->
+    <section class="quality-section" id="quality-section">
+        <div class="container">
+            <div class="quality-content">
+                <div class="quality-text">
+                    <h2>Why Choose Rospand?</h2>
+                    <p>We don't just write code; we build businesses. Our team of expert developers and designers works
+                        closely with you to understand your vision and turn it into a reality. From startups to
+                        enterprise solutions, we deliver excellence.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Scalable Architecture</li>
+                        <li><i class="fas fa-check-circle"></i> Secure & Reliable</li>
+                        <li><i class="fas fa-check-circle"></i> On-time Delivery</li>
+                        <li><i class="fas fa-check-circle"></i> Post-launch Support</li>
+                    </ul>
+                </div>
+                <div class="quality-image">
+                    <!-- Using a high-quality existing image since generation failed -->
+                    <img src="../../images/Software development.jpg" alt="Mobile App Development Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack-section" id="tech-stack-section">
+        <div class="container">
+            <h2 class="section-title">Technology Stack</h2>
+            <div class="tech-icons">
+                <div class="tech-item"><i class="fab fa-swift"></i><span>Swift</span></div>
+                <div class="tech-item"><i class="fab fa-react"></i><span>React Native</span></div>
+                <div class="tech-item"><i class="fab fa-google"></i><span>Flutter</span></div>
+                <!-- Google icon as proxy for Flutter or text -->
+                <div class="tech-item"><i class="fab fa-java"></i><span>Java</span></div>
+                <div class="tech-item"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+                <div class="tech-item"><i class="fas fa-database"></i><span>Firebase</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section" id="process-section">
+        <div class="container">
+            <h2 class="section-title">Our Development Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Discovery</h3>
+                    <p>We analyze your requirements and define the project scope.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Design</h3>
+                    <p>Creating wireframes and prototypes for the user interface.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Develop</h3>
+                    <p>Writing clean, efficient code to build your application.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h3>Launch</h3>
+                    <p>Testing, deployment, and publishing to app stores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Build Your App?</h2>
+            <p>Let's discuss your project and bring your idea to life.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section" id="contact-form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <h2>Get in Touch</h2>
+                <form action="https://formspree.io/f/mvgonyow" method="POST">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="Name" placeholder="Enter your name" required autocomplete="off">
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="Email" placeholder="Enter your email" required
+                        autocomplete="off">
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="Message" rows="5" placeholder="Your message" required
+                        autocomplete="off"></textarea>
+
+                    <div class="recaptcha-wrapper">
+                        <div class="g-recaptcha" data-sitekey="6Ld4xcQqAAAAALELBLEb5rSPyzEvIa3WaewsXAIH"></div>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <!-- Footer Inlined for Local View -->
+    <div class="footertopdiv"></div>
+    <link rel="stylesheet" href="../../Footer/style.css">
+    <footer class="footer">
+
+        <div class="footer__addr">
+            <h1 class="footer__logo">Rospand Global Techno Services Pvt Ltd</h1>
+
+            <h2>Offices</h2>
+
+            <address>
+                <div>
+                    <img src="../../images/india.jpg" height="30px" alt="India Flag">
+                    <p>
+                        <strong>India:</strong><br>
+                        Rospand Global Techno Services Pvt Ltd<br>
+                        106 Suphalam Building, Opposite ICAD Institute,<br>
+                        Byramji Town, Nagpur. 440013
+                    </p>
+                </div>
+                <div>
+                    <img src="../../images/dubai.jpg" height="30px" alt="UAE Flag">
+                    <p>
+                        <strong>UAE:</strong><br>
+                        Rospand Global Techno Services FZCO<br>
+                        48083-001, A1 Business Park DDP,<br>
+                        Silicon Oasis, Dubai, UAE
+                    </p>
+                </div>
+                <div>
+                    <img src="../../images/america.jpg" height="30px" alt="USA Flag">
+                    <p>
+                        <strong>USA:</strong><br>
+                        Rospand Global Techno Services LLC<br>
+                        8 The Green Suite A,<br>
+                        Dover, Delaware 19901, USA
+                    </p>
+                </div>
+            </address>
+        </div>
+
+
+        <div class="footer__nav">
+            <div class="nav__item">
+                <h2 class="nav__title">Our Services</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="">Import Export</a>
+                    </li>
+                    <li>
+                        <a href="../../IT_services/IT/it.html">IT Services</a>
+                    </li>
+
+                    <li>
+                        <a href="../../Agro_product/agro.html">Agro Products</a>
+                    </li>
+
+                    <li>
+                        <a href="../../Fastion/fashion.html">Fashion</a>
+                    </li>
+                    <li>
+                        <a href="#">Merchan Trading</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__item nav__item--extra technology">
+                <h2 class="nav__title">Technology</h2>
+
+                <ul class="nav__ul nav__ul--extra">
+                    <li>
+                        <a href="../../IT_services/IT/it.html">Web Development</a>
+                    </li>
+
+                    <li>
+                        <a href="../../IT_services/IT/it.html">App Development</a>
+                    </li>
+                    <li>
+                        <a href="#">Search Engine Optimization</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Sales & Services</a>
+                    </li>
+
+                    <li>
+                        <a href="../../IT_services/BPO/bpo.html">BPO Services</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__item nav__item--extra">
+                <h2 class="nav__title">Products We Import / Export</h2>
+
+                <ul class="nav__ul nav__ul--extra">
+                    <li>
+                        <a href="../../Agro_product/agro.html">Spices & Grains</a>
+                    </li>
+
+                    <li>
+                        <a href="../../Agro_product/agro.html#disposable">disposable Items</a>
+                    </li>
+
+                    <li>
+                        <a href="../../Agro_product/agro.html#disposable">Paper plates</a>
+                    </li>
+
+                    <li>
+                        <a href="../../Fastion/Men/mens-fashion.html">Mens Fashion Item</a>
+                    </li>
+
+                    <li>
+                        <a href="../../Fastion/Women/womens-fashion.html">Womens Fashion Item</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="nav__item">
+                <h2 class="nav__title">Legal</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="../../privacy&policies/privacy.html">Privacy & Policy</a>
+                    </li>
+
+                    <li>
+                        <a href="../../term&condition/terms-conditions.html">Terms & Conditions</a>
+                    </li>
+
+                    <li>
+                        <a href="../../Branches/branches.html">Sitemap</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="legal">
+            <p>&copy; 2024 Rospand Global Techno Services Pvt Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Widget -->
+    <a href="https://wa.me/918421148095" target="_blank" class="whatsapp" style="bottom: 6rem !important; right: 20px;">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Navbar Function
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <script src="../../tawk.to/chat.js"></script>
+</body>
+
+</html>

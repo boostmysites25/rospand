@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rospand Global</title>
+    <link rel="icon" type="image/x-icon" href="../../../../../../../../images/logo.png">
+    <link rel="stylesheet" href="agro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait until the navbar is fetched and added to the DOM
+            fetch('/Nav_bar/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+
+                    // Add active class after navbar is loaded
+                    const navLinks = document.querySelectorAll("header nav a");
+                    const currentPath = window.location.pathname;
+
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPath || link.getAttribute("href") === currentPath.split('/').pop()) {
+                            link.classList.add("active");
+                        }
+                    });
+                });
+        });
+
+    </script>
+    <main>
+        <h1>Agro Products</h1>
+        <p class="intro">Welcome to Rospand Company, a trusted leader in the agro-products sector. <br>We are dedicated
+            to
+            delivering high-quality agricultural products that empower farmers and enrich lives.</p>
+
+        <div class="product-list">
+            <!-- Product Item: Wheat -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/wheat.jpg" alt="Wheat">
+                <h3>Wheat</h3>
+                <p>A staple food rich in nutrients, perfect for a variety of culinary uses from bread to pasta.</p>
+            </div>
+
+            <!-- Product Item: Basmati Rice -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/rice.jpg" alt="Basmati Rice">
+                <h3>Basmati Rice</h3>
+                <p>Long-grain rice known for its delicate fragrance and fluffy texture when cooked.</p>
+            </div>
+
+            <!-- Product Item: Turmeric -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/corn.jpeg" alt="Turmeric">
+                <h3>Corn</h3>
+                <p>A starchy vegetable with a sweet flavor, commonly used in various forms such as kernels, flour, or
+                    oil, known for its versatility in cooking.</p>
+            </div>
+
+            <!-- Product Item: Basmati Rice -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/beans.jpeg" alt="Basmati Rice">
+                <h3>Dry Beans</h3>
+                <p>Dry Beans
+                    known for their high protein content and versatility in cooking.</p>
+            </div>
+
+            <!-- Product Item: Turmeric -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/turmeric.jpg" alt="Turmeric">
+                <h3>Turmeric</h3>
+                <p>A golden spice with medicinal properties, widely used in cooking and as a natural remedy.</p>
+            </div>
+
+            <!-- Product Item: Bay Leaves -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/bayleaves.jpg" alt="Bay Leaves">
+                <h3>Bay Leaves</h3>
+                <p>Aromatic leaves used in cooking to add a subtle flavor to soups, stews, and curries.</p>
+            </div>
+
+            <!-- Product Item: Carom Seeds -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/carom seeds.jpg" alt="Carom Seeds">
+                <h3>Carom Seeds</h3>
+                <p>Also known as Ajwain, these seeds add a pungent, bitter flavor to dishes and aid in digestion.</p>
+            </div>
+
+            <!-- Product Item: White Rice Flour -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/rice flour.jpg" alt="White Rice Flour">
+                <h3>White Rice Flour</h3>
+                <p>A fine flour made from rice, used for baking and in gluten-free cooking.</p>
+            </div>
+
+            <!-- Product Item: Mace -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/mace.jpg" alt="Mace">
+                <h3>Mace</h3>
+                <p>Derived from the nutmeg plant, mace adds a warm, aromatic flavor to cooking and baking.</p>
+            </div>
+
+            <!-- Product Item: Nutmeg -->
+            <div class="product">
+                <img src="../../../../../../../../images/Nutmeg.jpg" alt="Nutmeg">
+                <h3>Nutmeg</h3>
+                <p>Known for its sweet and warm flavor, nutmeg is used in both sweet and savory dishes.</p>
+            </div>
+
+            <!-- Product Item: Wheat Flour -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/wheat-flour.jpg" alt="Wheat Flour">
+                <h3>Wheat Flour</h3>
+                <p>Essential for baking bread, cakes, and other staple foods, it’s an important part of many cuisines.
+                </p>
+            </div>
+
+            <!-- Product Item: Black/Brown Cardamom -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/black-cardamom.jpg" alt="Black/Brown Cardamom">
+                <h3>Black/Brown Cardamom</h3>
+                <p>With a smoky flavor, this spice is used in savory dishes, curries, and teas.</p>
+            </div>
+
+            <!-- Product Item: Cinnamon Sticks -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/cinnamon-sticks.jpg" alt="Cinnamon Sticks">
+                <h3>Cinnamon Sticks</h3>
+                <p>Popular in both sweet and savory recipes, cinnamon adds a warm, spicy touch to dishes.</p>
+            </div>
+
+            <!-- Product Item: Coriander Seeds -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/coriander-seeds.jpg" alt="Coriander Seeds">
+                <h3>Coriander Seeds</h3>
+                <p>These seeds have a citrusy, spicy flavor and are often used in Indian and Middle Eastern cuisines.
+                </p>
+            </div>
+
+            <!-- Product Item: Dry Fenugreek -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/fenugreek.jpg" alt="Dry Fenugreek">
+                <h3>Dry Fenugreek</h3>
+                <p>Used to add a bitter and slightly nutty flavor to dishes, fenugreek is a popular spice in Indian
+                    cooking.</p>
+            </div>
+
+            <!-- Product Item: Kashmiri Chilli -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/kashmiri-chilli.jpg" alt="Kashmiri Chilli">
+                <h3> Red Chilli Powder</h3>
+                <p>Known for its vibrant color and mild heat, it is a key ingredient in many Indian curry dishes.</p>
+            </div>
+
+            <!-- Product Item: Cloves -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/cloves.jpg" alt="Cloves">
+                <h3>Cloves</h3>
+                <p>Small, aromatic flower buds that add a warm, sweet-spicy flavor to both savory and sweet dishes.</p>
+            </div>
+
+            <!-- Product Item: Tamarind -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/tamarind.jpg" alt="Tamarind">
+                <h3>Tamarind</h3>
+                <p>A tangy fruit often used in sauces, chutneys, and curries for its unique sour-sweet flavor.</p>
+            </div>
+
+            <!-- Product Item: Cumin Seeds -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/cumin-seeds.jpg" alt="Cumin Seeds">
+                <h3>Cumin Seeds</h3>
+                <p>A key spice in many cuisines, cumin has a warm, earthy flavor that enhances various dishes.</p>
+            </div>
+
+            <!-- Product Item: Fennel Seeds -->
+            <div class="product">
+                <img src="../../../../../../../../images/images/fennel-seeds.jpg" alt="Fennel Seeds">
+                <h3>Fennel Seeds</h3>
+                <p>These sweet, aromatic seeds are used in both cooking and as a digestive aid after meals.</p>
+            </div>
+        </div>
+
+        <div id="disposable" class="Disposable">
+            <!-- Disposable Items -->
+            <h1>Disposable Items</h1>
+            <p class="intro">Combining tradition with innovation, we work closely with local farmers to produce
+                eco-friendly
+                goods. <br>
+                Our commitment to excellence extends internationally, as we proudly export our products to Dubai (UAE),
+                India, and America (USA), <br>
+                ensuring premium agricultural produce reaches global markets.</p>
+
+            <div class="product-list">
+                <!-- Product Item: Wheat -->
+                <div class="product">
+                    <img src="../../../../../../../../images/images/Plates.jpeg" alt="Wheat">
+                    <h3>Plates For Lunch / Dinner</h3>
+                    <p>Plates are convenient for events, while sustainable plates minimize environmental impact.</p>
+                </div>
+
+                <!-- Product Item: Basmati Rice -->
+                <div class="product">
+                    <img src="../../../../../../../../images/images/Small plate.jpeg" alt="Basmati Rice">
+                    <h3>Small Plates</h3>
+                    <p>Small plates are ideal for serving snacks, desserts, or appetizers at birthday parties and
+                        events.
+                    </p>
+                </div>
+
+                <!-- Product Item: Turmeric -->
+                <div class="product">
+                    <img src="../../../../../../../../images/images/bowl.jpeg" alt="Turmeric">
+                    <h3>Bowls</h3>
+                    <p>Bowls are versatile dishware used for serving soups, salads, desserts, or snacks. </p>
+                </div>
+
+                <!-- Product Item: Bay Leaves -->
+                <div class="product">
+                    <img src="../../../../../../../../images/images/cutlery.jpeg" alt="Bay Leaves">
+                    <h3>Cutleries</h3>
+                    <p>Cutlery includes utensils like spoons, forks, and knives used for eating and serving food. </p>
+                </div>
+
+                <!-- Product Item: Carom Seeds -->
+                <div class="product">
+                    <img src="../../../../../../../../images/images/glasses.jpeg" alt="Carom Seeds">
+                    <h3>Glasses</h3>
+                    <p>Glasses are used to serve beverages like water, juice, or soft drinks.</p>
+                </div>
+
+                <!-- Product Item: White Rice Flour -->
+                <div class="product">
+                    <img src="../../../../../../../../images/images/boxes.jpeg" alt="White Rice Flour">
+                    <h3>Containers</h3>
+                    <p>Containers are used for storing or transporting food and they come in various sizes and
+                        materials.
+                    </p>
+                </div>
+
+                <!-- Product Item: Mace -->
+                <div class="product">
+                    <img src="../../../../../../../../images/images/straws.jpeg" alt="Mace">
+                    <h3>Straws</h3>
+                    <p>Straws are tubes used for drinking beverages.</p>
+                </div>
+
+                <!-- Product Item: Mace -->
+                <div class="product">
+                    <img src="../../../../../../../../images/images/set.jpeg" alt="Mace">
+                    <h3>Dinner Set</h3>
+                    <p>
+                        A dinner set typically includes matching plates, bowls, glasses, and cutlery designed for
+                        serving
+                        meals.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <a href="https://wa.me/918421148095" target="_blank" class="whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <div id="footercontent"></div>
+    <script>
+        // Load footer dynamically
+        function loadFooter() {
+            fetch('/Footer/footer.html') // Update path as needed
+                .then((response) => response.text())
+                .then((footerHTML) => {
+                    document.getElementById('footercontent').innerHTML = footerHTML;
+                })
+                .catch((error) => console.error('Error loading footer:', error));
+        }
+
+        // Call the function to load the footer
+        loadFooter();
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        
+        document.querySelector('html').style.scrollBehavior = 'smooth';
+
+    </script>
+    <script src="../../../../../../../../tawk.to/chat.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            margin: 50px 20%;
+            text-align: justify;
+            text-justify: auto;
+        }
+        p{
+            font-size: 16px;
+        }
+        @media (max-width: 480px) {
+            article {
+                margin: 30px 5%;
+                font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+     <!-- Top Bar -->
+     <div id="navbar" class="navbarindex"></div>
+     <script>
+         document.addEventListener('DOMContentLoaded', () => {
+             // Wait until the navbar is fetched and added to the DOM
+             fetch('/Nav_bar/navbar.html')
+                 .then(response => response.text())
+                 .then(data => {
+                     document.getElementById('navbar').innerHTML = data;
+         
+                     // Add active class after navbar is loaded
+                     const navLinks = document.querySelectorAll("header nav a");
+                     const currentPath = window.location.pathname;
+         
+                     navLinks.forEach(link => {
+                         if (link.getAttribute("href") === currentPath || link.getAttribute("href") === currentPath.split('/').pop()) {
+                             link.classList.add("active");
+                         }
+                     });
+                 });
+         });
+         
+     </script>
+    <article>
+        <h1>How to Optimize Your Website for Better Performance.</h1>
+        <section>
+            <h2>Step 1: Analyze Current Performance</h2>
+            <p>Start by understanding your website's current performance metrics.</p>
+            <h3>Key Actions:</h3>
+            <ol>
+                <li>Use tools like Google PageSpeed Insights, Lighthouse, or GTmetrix to identify performance bottlenecks.</li>
+                <li>Analyze Core Web Vitals: Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS).</li>
+                <li>Check your website’s loading speed on both desktop and mobile devices.</li>
+            </ol>
+        </section>
+    
+        <section>
+            <h2>Step 2: Optimize Images</h2>
+            <p>Images often consume the largest portion of website bandwidth. Optimizing them can significantly reduce loading times.</p>
+            <h3>Key Actions:</h3>
+            <ol>
+                <li>Use modern image formats like WebP or AVIF for better compression.</li>
+                <li>Compress images using tools like TinyPNG or ImageOptim.</li>
+                <li>Implement lazy loading to load images only when they’re visible in the viewport.</li>
+                <li>Use responsive images to serve the appropriate size based on the user’s device.</li>
+            </ol>
+        </section>
+    
+        <section>
+            <h2>Step 3: Minimize HTTP Requests</h2>
+            <p>Each HTTP request adds to the page loading time. Reducing the number of requests can boost performance.</p>
+            <h3>Key Actions:</h3>
+            <ol>
+                <li>Combine CSS and JavaScript files where possible.</li>
+                <li>Use CSS sprites to combine multiple images into one.</li>
+                <li>Remove unnecessary plugins, widgets, and third-party scripts.</li>
+                <li>Enable HTTP/2 to allow multiplexing of requests.</li>
+            </ol>
+        </section>
+    
+        <section>
+            <h2>Step 4: Leverage Browser Caching</h2>
+            <p>Browser caching stores static resources locally, reducing the need to re-download them.</p>
+            <h3>Key Actions:</h3>
+            <ol>
+                <li>Set up caching rules using .htaccess or your server configuration.</li>
+                <li>Specify cache lifetimes for different file types (e.g., images, CSS, JS).</li>
+                <li>Use tools like Cloudflare for additional caching and CDN services.</li>
+            </ol>
+        </section>
+    
+        <section>
+            <h2>Step 5: Enable Compression</h2>
+            <p>Compression reduces the size of files sent from the server, speeding up data transfer.</p>
+            <h3>Key Actions:</h3>
+            <ol>
+                <li>Enable Gzip or Brotli compression on your web server.</li>
+                <li>Compress HTML, CSS, and JavaScript files.</li>
+                <li>Test compression effectiveness using online tools like Check Gzip Compression.</li>
+            </ol>
+        </section>
+    
+        <section>
+            <h2>Step 6: Use a Content Delivery Network (CDN)</h2>
+            <p>A CDN distributes your content across multiple servers globally, reducing latency and improving load times.</p>
+            <h3>Key Actions:</h3>
+            <ol>
+                <li>Choose a reliable CDN provider such as Cloudflare, Akamai, or AWS CloudFront.</li>
+                <li>Configure your website to serve static assets from the CDN.</li>
+                <li>Monitor CDN performance and adjust settings for optimal delivery.</li>
+            </ol>
+        </section>
+    
+        <section>
+            <h2>Step 7: Optimize Code</h2>
+            <p>Efficient code execution is vital for fast website performance.</p>
+            <h3>Key Actions:</h3>
+            <ol>
+                <li>Minify CSS, JavaScript, and HTML files to remove unnecessary characters and spaces.</li>
+                <li>Eliminate render-blocking resources by deferring or asynchronously loading scripts.</li>
+                <li>Use a task runner like Gulp or Webpack to automate optimization tasks.</li>
+            </ol>
+        </section>
+    
+        <section>
+            <h2>Step 8: Improve Server Performance</h2>
+            <p>A fast server ensures quicker response times and a smoother user experience.</p>
+            <h3>Key Actions:</h3>
+            <ol>
+                <li>Upgrade to a high-performance hosting provider.</li>
+                <li>Use a dedicated or virtual private server (VPS) instead of shared hosting.</li>
+                <li>Optimize database queries and implement indexing for faster data retrieval.</li>
+                <li>Implement server-side caching with tools like Redis or Memcached.</li>
+            </ol>
+        </section>
+    
+        <section>
+            <h2>Step 9: Enhance Mobile Performance</h2>
+            <p>Mobile optimization is crucial, as most web traffic now comes from mobile devices.</p>
+            <h3>Key Actions:</h3>
+            <ol>
+                <li>Use responsive design to ensure your website adapts to different screen sizes.</li>
+                <li>Optimize touch targets and font sizes for usability.</li>
+                <li>Test mobile performance using tools like Google’s Mobile-Friendly Test.</li>
+            </ol>
+        </section>
+    
+        <section>
+            <h2>Step 10: Regularly Monitor and Test</h2>
+            <p>Website optimization is an ongoing process. Regular testing ensures your site maintains top performance.</p>
+            <h3>Key Actions:</h3>
+            <ol>
+                <li>Schedule periodic audits using performance tools.</li>
+                <li>Monitor real user metrics (RUM) for live data on user experiences.</li>
+                <li>Stay updated on new web performance best practices and technologies.</li>
+            </ol>
+        </section>
+    
+        <footer>
+            <p>By implementing these steps, you can create a faster, more efficient website that delights users and ranks higher in search engines. Regular optimization and monitoring will ensure your website remains competitive in today’s digital landscape.</p>
+        </footer>
+    </main>
+    </article>
+</body>
+</html>

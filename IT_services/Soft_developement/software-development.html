@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rospand Global</title>
+    <link rel="icon" type="image/x-icon" href="../../../../../../../../../images/logo.png">
+    <link rel="stylesheet" href="software-development.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait until the navbar is fetched and added to the DOM
+            fetch('/Nav_bar/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+        
+                    // Add active class after navbar is loaded
+                    const navLinks = document.querySelectorAll("header nav a");
+                    const currentPath = window.location.pathname;
+        
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPath || link.getAttribute("href") === currentPath.split('/').pop()) {
+                            link.classList.add("active");
+                        }
+                    });
+                });
+        });
+        
+    </script>
+
+    <!-- Background Video Section -->
+    <div class="video-background">
+        <video autoplay muted loop class="video">
+            <source src="../../../../../../../../../images/software.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay-text">
+            <p>
+                <span class="typing">Software Development</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- Software Development Facilities Section -->
+    <section class="services">
+        <div class="container">
+            <p>Software Development Facilities We Provide</p>
+            <ul class="service-list">
+                <li>
+                    <i class="fas fa-cogs"></i>
+                    Custom Software Development tailored to your business needs.
+                </li>
+                <li>
+                    <i class="fas fa-cloud"></i>
+                    Cloud Solutions for scalable and secure software infrastructure.
+                </li>
+                <li>
+                    <i class="fas fa-lock"></i>
+                    Robust Security Features to ensure the safety of your data.
+                </li>
+                <li>
+                    <i class="fas fa-mobile-alt"></i>
+                    Mobile Application Development for iOS and Android platforms.
+                </li>
+                <li>
+                    <i class="fas fa-desktop"></i>
+                    Web Application Development with responsive and modern design.
+                </li>
+                <li>
+                    <i class="fas fa-users"></i>
+                    UX/UI Design Services for user-centric design solutions.
+                </li>
+                <li>
+                    <i class="fas fa-sync-alt"></i>
+                    Integration with third-party systems for seamless business operations.
+                </li>
+                <li>
+                    <i class="fas fa-code"></i>
+                    API Development and Integration for smooth functionality.
+                </li>
+                <li>
+                    <i class="fas fa-database"></i>
+                    Database Management Systems for organized data handling.
+                </li>
+                <li>
+                    <i class="fas fa-chart-line"></i>
+                    Data Analytics and Business Intelligence solutions.
+                </li>
+                <li>
+                    <i class="fas fa-headset"></i>
+                    Dedicated Support & Maintenance to ensure smooth operations.
+                </li>
+                <li>
+                    <i class="fas fa-network-wired"></i>
+                    Enterprise Software Solutions to streamline processes.
+                </li>
+                <li>
+                    <i class="fas fa-bug"></i>
+                    QA Testing Services to deliver bug-free applications.
+                </li>
+                <li>
+                    <i class="fas fa-robot"></i>
+                    Automation Tools to increase operational efficiency.
+                </li>
+                <li>
+                    <i class="fas fa-bullseye"></i>
+                    Agile Development Methodologies for faster delivery.
+                </li>
+                <li>
+                    <i class="fas fa-project-diagram"></i>
+                    Project Management Tools for better collaboration.
+                </li>
+                <li>
+                    <i class="fas fa-lightbulb"></i>
+                    Innovative AI & Machine Learning integrations.
+                </li>
+                <li>
+                    <i class="fas fa-shopping-cart"></i>
+                    E-commerce Development with secure payment systems.
+                </li>
+                <li>
+                    <i class="fas fa-server"></i>
+                    Server Management and Hosting Services.
+                </li>
+                <li>
+                    <i class="fas fa-hand-holding-usd"></i>
+                    Cost-effective solutions with a focus on ROI.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- New Section: Software Development Info -->
+    <section class="software-info">
+        <div class="content">
+            <div class="text-content">
+                <h2>Why Choose Us for Software Development?</h2>
+                <p>
+                    At Rospand Global Techno Services Pvt Ltd, we specialize in crafting innovative, reliable, and scalable
+                    software solutions tailored to meet your unique business needs. Our experienced team of developers,
+                    designers, and strategists collaborates closely with you to ensure a seamless development journey,
+                    starting from ideation and planning to deployment and beyond. Leveraging the latest technologies,
+                    agile methodologies, and industry best practices, we deliver exceptional solutions that align with
+                    your goals.
+                    <br><br>
+                    Whether you require custom software tailored to streamline your business processes, dynamic mobile
+                    applications to enhance user engagement, or robust enterprise-level systems for complex operations,
+                    we have the expertise to bring your vision to life. Our approach emphasizes scalability, ensuring
+                    your software grows with your business, and incorporates stringent security measures to protect
+                    sensitive data. We also prioritize performance optimization to ensure your solution runs efficiently
+                    and effectively in real-world scenarios.
+                    <br><br>
+                    Beyond development, our services extend to software testing, quality assurance, and post-deployment
+                    support, ensuring your software remains reliable and up-to-date. Partner with Rospand Global Techno
+                    Services to transform your ideas into cutting-edge, user-friendly solutions that empower your
+                    business and drive it forward in an ever-evolving digital landscape.
+                </p>
+            </div>
+        </div>
+    </section>
+
+        <div class="des">
+            <h2>We Create The Software As Per Your Requirements <br>
+                Beacause Customer Satisfaction Is Our First Priority</h2>
+        </div>
+
+        <div class="last">
+            <img src="../../../../../../../../../images/customer.png" alt="">
+        </div>
+        <div id="footercontent"></div>
+        <a href="https://wa.me/918421148095" target="_blank" class="whatsapp">
+        <i class="fa-brands fa-whatsapp"></i></a>
+        <script>
+            // Load footer dynamically
+            function loadFooter() {
+                fetch('/Footer/footer.html') // Update path as needed
+                    .then((response) => response.text())
+                    .then((footerHTML) => {
+                        document.getElementById('footercontent').innerHTML = footerHTML;
+                    })
+                    .catch((error) => console.error('Error loading footer:', error));
+            }
+    
+            // Call the function to load the footer
+            loadFooter();
+
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+        <script src="../../../../../../../../../tawk.to/chat.js"></script>
+</body>
+
+</html>

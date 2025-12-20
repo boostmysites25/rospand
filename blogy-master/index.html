@@ -1,0 +1,745 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Blogy - Hey, we’re Blogy. See our thoughts, stories and ideas.</title>
+  <meta name="title" content="Blogy - Hey, we’re Blogy. See our thoughts, stories and ideas.">
+  <meta name="description" content="This is a blog html template made by codewithsadee">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/69bdda46f6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div id="navbar" class="navbarindex"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait until the navbar is fetched and added to the DOM
+            fetch('/Nav_bar/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+        
+                    // Add active class after navbar is loaded
+                    const navLinks = document.querySelectorAll("header nav a");
+                    const currentPath = window.location.pathname;
+        
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPath || link.getAttribute("href") === currentPath.split('/').pop()) {
+                            link.classList.add("active");
+                        }
+                    });
+                });
+        });
+        
+    </script>
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" aria-label="home">
+        <div class="container">
+
+          <h1 class="h1 hero-title">
+            <strong class="strong">Hey, we’re Blogy.</strong> See our thoughts, stories and ideas.
+          </h1>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURED POST
+      -->
+
+      <section class="section featured" aria-label="featured post">
+        <div class="container">
+
+          <p class="section-subtitle">
+            Get started with our <strong class="strong">best stories</strong>
+          </p>
+
+          <ul class="has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                  <img src="./assets/images/featured-1.jpg" width="500" height="600" loading="lazy"
+                    alt="New technology is not good or evil in and of itself" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li>
+                      <a href="" class="card-tag">AI</a>
+                    </li>
+
+                    <li>
+                      <a href="" class="card-tag">MachineLearning</a>
+                    </li>
+
+                    <li>
+                      <a href="" class="card-tag">DeepLearning</a>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h4">
+                    <a href="../../../../../../../../blogy-master/blogdata/ai_it_blog.html" class="card-title hover:underline">
+                      Emerging Technologies in IT: AI, IoT, and Blockchain
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    The world of Information Technology (IT) is continuously evolving, driven by groundbreaking innovations that redefine the way businesses operate and how people interact with technology. Among the most transformative technologies shaping the IT landscape are Artificial Intelligence (AI), the Internet of Things (IoT), and Blockchain. These technologies are not only creating new opportunities but also disrupting traditional systems across industries. In this blog, we will delve into the fundamentals, applications, and implications of these emerging technologies, offering a comprehensive overview of their potential to revolutionize the future.
+
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                  <img src="./assets/images/featured-2.jpg" width="500" height="600" loading="lazy"
+                    alt="It’s a new era in design, there are no rules" class="img-cover">
+
+                  
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li>
+                      <a href="" class="card-tag">Future</a>
+                    </li>
+
+                    <li>
+                      <a href="" class="card-tag">predict</a>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h4">
+                    <a href="../../../../../../../../blogy-master/blogdata/Predictions_Future.html" class="card-title hover:underline">
+                      Predictions for the Future of IT in 2025.
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    Artificial Intelligence has already made significant inroads across industries, but by 2025, AI is expected to become even more integral to IT infrastructures. Here are some predictions for AI's growth:
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+            <li class="scrollbar-item">
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                  <img src="./assets/images/featured-4.jpg" width="500" height="600" loading="lazy"
+                    alt="Everyone has a different life story" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li>
+                      <a href="" class="card-tag">Fast</a>
+                    </li>
+
+                    <li>
+                      <a href="" class="card-tag">Speed</a>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h4">
+                    <a href="../../../../../../../../blogy-master/blogdata/Optimize_Website.html" class="card-title hover:underline">
+                      How to Optimize Your Website for Better Performance.
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    Start by understanding your website's current performance metrics.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                  <img src="./assets/images/featured-5.jpg" width="500" height="600" loading="lazy"
+                    alt="The difference is quality" class="img-cover">
+
+                
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li>
+                      <a href="" class="card-tag">Act</a>
+                    </li>
+
+                    <li>
+                      <a href="" class="card-tag">Rule</a>
+                    </li>
+                  </ul>
+
+                  <h3 class="h4">
+                    <a href="../../../../../../../../blogy-master/blogdata/Impacting_IT_2025.html" class="card-title hover:underline">
+                      How Regulations Are Impacting IT Companies in 2025.
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    In 2025, data privacy regulations like GDPR in the EU and CCPA/CPRA in the US have become more stringent. Companies must adopt robust mechanisms to protect user data and ensure compliance.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                  <img src="./assets/images/featured-6.jpg" width="500" height="600" loading="lazy"
+                    alt="Problems are not stop signs, they are guidelines" class="img-cover">
+
+                  
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li>
+                      <a href="" class="card-tag">Idea</a>
+                    </li>
+
+                    <li>
+                      <a href="" class="card-tag">Creating</a>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h4">
+                    <a href="../../../../../../../../blogy-master/blogdata/career_softw.html" class="card-title hover:underline">
+                      How to Start a Career in Software Development.
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    Before diving in, it’s crucial to understand what software developers do. They design, develop, and maintain software applications and systems to meet user needs
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #RECENT POST
+      -->
+
+      <section class="section recent" aria-label="recent post">
+        <div class="container">
+
+          <div class="title-wrapper">
+
+            <h2 class="h2 section-title">
+              See what we’ve <strong class="strong">written lately</strong>
+            </h2>
+
+          </div>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 550; --height: 660;">
+                  <img src="/blogy-master/assets//images/recent-1.jpg" width="550" height="660" loading="lazy"
+                    alt="Creating is a privilege but it’s also a gift" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li>
+                      <a href="" class="card-tag">TechInnovation</a>
+                    </li>
+
+                    <li>
+                      <a href="" class="card-tag">TechTrends</a>
+                    </li>
+
+                    <li>
+                      <a href="" class="card-tag">InnovationInTech</a>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h4">
+                    <a href="../../../../../../../../blogy-master/blogdata/top_5_technologies.html" class="card-title hover:underline">
+                      Top 5 Technologies Shaping the Future of IT in 2024.
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    Quantum computing is no longer a futuristic concept; it is becoming a tangible reality. By leveraging quantum mechanics principles, quantum computers are poised to solve complex problems beyond the reach of classical computers.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner img-holder" style="--width: 550; --height: 660;">
+                  <img src="./assets/images/recent-2.jpg" width="550" height="660" loading="lazy"
+                    alt="Being unique is better than being perfect" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <ul class="card-meta-list">
+                    <li>
+                      <a href="" class="card-tag">AIInHealthcare</a>
+                    </li>
+
+                    <li>
+                      <a href="" class="card-tag">AIInBusiness</a>
+                    </li>
+                  </ul>
+
+                  <h3 class="h4">
+                    <a href="../../../../../../../../blogy-master/blogdata/WhyHealthcareNeeds.html" class="card-title hover:underline">
+                      Why Healthcare Needs Better IT Security Solutions.
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    Nam in pretium dui. Phasellus dapibus, mi at molestie cursus, neque eros aliquet nisi, non
+                    efficitur nisi est nec mi.
+                    Nullam semper, ligula a luctus ornare, leo turpis fermentum lectus, quis volutpat urna orci a
+                    lectus. Duis et odio
+                    lobortis, auctor justo ut, egestas magna.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 550; --height: 660;">
+                  <img src="./assets/images/recent-3.jpg" width="550" height="660" loading="lazy"
+                    alt="Now we’re getting somewhere" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li>
+                      <a href="" class="card-tag">Idea</a>
+                    </li>
+
+                    <li>
+                      <a href="" class="card-tag">AIImpact</a>
+                    </li>
+
+                    <li>
+                      <a href="" class="card-tag">Review</a>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h4">
+                    <a href="../../../../../../../../blogy-master/blogdata/Managing_IT_Teams.html" class="card-title hover:underline">
+                      Managing IT Teams Effectively from Anywhere.
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    he rise of remote and hybrid work environments has transformed how IT teams operate. As organizations embrace flexibility, managing IT teams from anywhere has become a critical skill for leaders. This shift presents unique challenges, from ensuring seamless collaboration to maintaining productivity and morale across geographically dispersed teams. However, with the right strategies and tools, leaders can effectively manage IT teams and drive innovation regardless of location.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 550; --height: 660;">
+                  <img src="./assets/images/recent-4.jpg" width="550" height="660" loading="lazy"
+                    alt="The trick to getting more done is to have the freedom to roam around" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li>
+                      <a href="" class="card-tag">SmartTechnology</a>
+                    </li>
+
+                    <li>
+                      <a href="" class="card-tag">Design</a>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h4">
+                    <a href="../../../../../../../../blogy-master/blogdata/top_10_productive.html" class="card-title hover:underline">
+                      Top 10 Productivity Tools for Developers.
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    In the fast-paced world of software development, productivity is key to success. Developers are always looking for tools to streamline workflows, improve efficiency, and enhance collaboration. With the right tools, developers can focus on solving problems and building innovative solutions. This blog highlights the top 10 productivity tools for developers in 2024 and explains how they can help optimize your development process.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 550; --height: 660;">
+                  <img src="./assets/images/recent-5.jpg" width="550" height="660" loading="lazy"
+                    alt="Every day, in every city and town across the country" class="img-cover">
+
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li>
+                      <a href="" class="card-tag">TechTrends</a>
+                    </li>
+
+                    <li>
+                      <a href="" class="card-tag">TechBlog</a>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h4">
+                    <a href="../../../../../../../../blogy-master/blogdata/frontend_vs_backend.html" class="card-title hover:underline">
+                      Understanding Front-End vs. Back-End Development.
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    How both parts of web development come together to create interactive, efficient, and dynamic websites.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 550; --height: 660;">
+                  <img src="./assets/images/recent-6.jpg" width="550" height="660" loading="lazy"
+                    alt="Your voice, your mind, your story, your vision" class="img-cover">
+
+                  
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li>
+                      <a href="" class="card-tag">AIInBusiness</a>
+                    </li>
+
+                    <li>
+                      <a href="" class="card-tag">TechTrends</a>
+                    </li>
+
+                    <li>
+                      <a href="" class="card-tag">Story</a>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h4">
+                    <a href="../../../../../../../../blogy-master/blogdata/IT_StartupSupports.html" class="card-title hover:underline">
+                      How Our IT Startup Supports Local Communities.
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    Learn how our IT startup is making a difference in local communities through innovation, collaboration, and social responsibility.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #RECOMMENDED POST
+      -->
+
+      <section class="section recommended" aria-label="recommended post">
+        <div class="container">
+
+          <p class="section-subtitle">
+            <strong class="strong">Recommended</strong>
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
+                  <img src="./assets/images/featured-6.avif" width="300" height="360" loading="lazy"
+                    alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h5">
+                    <a href="../../../../../../../../blogy-master/blogdata/career_softw.html" class="card-title hover:underline">
+                      How to Start a Career in Software Development.
+                    </a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
+                  <img src="./assets/images/featured-4.jpg" width="300" height="360" loading="lazy"
+                    alt="Every day, in every city and town across the country " class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h5">
+                    <a href="../../../../../../../../blogy-master/blogdata/Optimize_Website.html" class="card-title hover:underline">
+                      How to Optimize Your Website for Better Performance.
+                    </a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
+                  <img src="./assets/images/recent-3.jpg" width="300" height="360" loading="lazy"
+                    alt="I work best when my space is filled with inspiration " class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h5">
+                    <a href="../../../../../../../../blogy-master/blogdata/Managing_IT_Teams.html" class="card-title hover:underline">
+                      Managing IT Teams Effectively from Anywhere.
+                    </a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
+                  <img src="./assets/images/recent-6.jpg" width="300" height="360" loading="lazy"
+                    alt="I have my own definition of minimalism " class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h5">
+                    <a href="../../../../../../../../blogy-master/blogdata/IT_StartupSupports.html" class="card-title hover:underline">
+                      How Our IT Startup Supports Local Communities.
+                    </a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
+                  <img src="./assets/images/featured-1.jpg" width="300" height="360" loading="lazy"
+                    alt="Change your look and your attitude " class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h5">
+                    <a href="../../../../../../../../blogy-master/blogdata/Predictions_Future.html" class="card-title hover:underline">
+                      Predictions for the Future of IT in 2025.
+                    </a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
+                  <img src="./assets/images/featured-3.jpg" width="300" height="360" loading="lazy"
+                    alt="The difference is quality " class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h5">
+                    <a href="../../../../../../../../blogy-master/blogdata/Full-Stack_Web_App.html" class="card-title hover:underline">
+                      Step-by-Step Guide to Building a Full-Stack Web App.
+                    </a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+      <a href="https://wa.me/918421148095" target="_blank" class="whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+
+
+
+      <!-- 
+        - #NEWSLETTER
+      -->
+
+      <section class="section newsletter">
+
+        <h2 class="h2 section-title">
+          For any <strong class="strong"> Inquiry</strong>
+        </h2>
+
+        <form action="" class="newsletter-form">
+          <input type="email" name="email_address" placeholder="Get In Touch" required class="email-field">
+          <button type="submit" class="btn"><a href="../../../../../../../../Contact_us/contact.html">Click here</a></button>
+        </form>
+
+      </section>
+
+    </article>
+  </main>
+
+  <div id="footercontent"></div>
+    <script src="script.js"></script>
+
+    <script>
+       
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+    </script>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+  <script src="../../../../../../../../tawk.to/chat.js"></script>
+</body>
+
+</html>

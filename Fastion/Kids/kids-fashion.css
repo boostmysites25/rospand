@@ -1,0 +1,242 @@
+﻿/* Reset default margin and padding */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;0,900;1,100;1,200;1,300;1,400;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;   
+}
+html, body {
+    background-color: #fbe9d0; /* Light beige background */
+}
+
+/* Sticky Top Bar */
+.top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fbe9d0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid #e0e0e0;
+    font-size: 14px;
+}
+
+/* Navigation Bar */
+header {
+    position: sticky;
+    top: 50px;
+    z-index: 999;
+    background-color: #244455; /* Dark blue */
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+header nav a:hover {
+    background-color: #874f41;
+    border-radius: 5px;
+}
+
+/* Style for video container */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the container */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4); /* Subtle overlay for better text visibility */
+    border-radius: 10px;
+}
+
+/* Quote container styles */
+.quote-container {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.quote-container p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* Categories Section */
+.categories-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.categories-section h2 {
+    font-size: 2rem;
+    color: #244455;
+    margin-bottom: 20px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.category {
+    text-align: center;
+    background-color: #fbe9d0;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category img {
+    width: 100%;
+    max-width: 250px; /* Cap the image width for larger screens */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 5px;
+}
+
+.category p {
+    font-size: 1.2rem;
+    color: #244455;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #244455;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .video-container {
+        height: 500px; /* Reduce video height for tablets */
+    }
+
+    .text-overlay {
+        font-size: 1.8rem;
+    }
+
+    .quote-container p {
+        font-size: 1.1rem;
+    }
+
+    .categories-section h2 {
+        font-size: 1.8rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        height: 400px; /* Further reduce video height for smaller tablets */
+    }
+
+    .text-overlay {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+
+    .quote-container p {
+        font-size: 1rem;
+    }
+
+    .categories-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .categories-grid {
+        gap: 15px;
+    }
+
+    .category img {
+        max-width: 350px; /* Reduce image size for tablets */
+    }
+
+    .category p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container {
+        height: 300px; /* Compact video for mobile screens */
+    }
+
+    .text-overlay {
+        font-size: 1.2rem;
+        padding: 6px;
+    }
+
+    .quote-container p {
+        font-size: 0.9rem;
+    }
+
+    .categories-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+        gap: 10px;
+    }
+
+    .category img {
+        max-width: 300px; /* Further reduce image size */
+    }
+
+    .category p {
+        font-size: 0.9rem;
+    }
+}

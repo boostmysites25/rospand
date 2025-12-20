@@ -1,0 +1,332 @@
+﻿/* Reset default margin and padding */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;0,900;1,100;1,200;1,300;1,400;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
+}
+html, body {
+    
+    background-color: #fbe9d0;
+}
+
+/* Contact Intro: Heading and Paragraph */
+.contact-intro {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.contact-intro h1 {
+    font-size: 2.5rem;
+    color: #874f41;
+}
+
+.contact-intro p {
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* Contact Bars: Left and Right Layout */
+.contact-bars {
+    padding: 0 50px 50px 50px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Left Bar: Contact Information */
+.left-bar {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    color: #244855;
+}
+
+.left-bar h2 {
+    color: #874f41;
+    margin-bottom: 10px;
+}
+
+.left-bar p {
+    margin: 5px 0;
+}
+
+.left-bar a {
+    color: #874f41;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.left-bar a:hover {
+    text-decoration: underline;
+}
+
+.left-bar .download button {
+    background-color: #874f41;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.left-bar .download button:hover {
+    background-color: #244855;
+}
+
+/* Right Bar: Contact Form */
+.right-bar {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #874f41;
+}
+
+.right-bar h2 {
+    color: #874f41;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #244855;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    background-color: #874f41;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #244855;
+}
+
+/* Social Icons */
+.social-icon {
+    color: #874f41;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #244855;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #244455;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .contact-bars {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .left-bar, .right-bar {
+        min-width: 100%; /* Stack items vertically */
+    }
+
+    .contact-intro h1 {
+        font-size: 2rem;
+    }
+
+    .contact-intro p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-bars {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    .left-bar, .right-bar {
+        padding: 15px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9rem;
+    }
+
+    form button {
+        font-size: 0.9rem;
+    }
+
+    .contact-intro h1 {
+        font-size: 1.8rem;
+    }
+
+    .contact-intro p {
+        font-size: 0.9rem;
+    }
+
+    .social-icon {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-intro h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-intro p {
+        font-size: 0.8rem;
+    }
+
+    .left-bar, .right-bar {
+        padding: 10px;
+    }
+
+    form input,
+    form textarea {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    form button {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .social-icon {
+        font-size: 1rem;
+    }
+}
+
+/* Alert */
+/* Alert Box Styling */
+.alert-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensures it's above other elements */
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none; /* Hidden by default */
+    min-width: 300px;
+}
+
+.alert-box h2 {
+    font-size: 1.5rem;
+    color: #244455;
+    margin-bottom: 10px;
+}
+
+.alert-box p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.alert-box button {
+    padding: 10px 20px;
+    background-color: #244455;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.alert-box button:hover {
+    background-color: #1b3340;
+}
+
+/* Overlay Styling */
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Below alert box but above everything else */
+    display: none; /* Hidden by default */
+}
+
+/* Image gallery */
+.image-gallery{
+    margin: 30px auto;
+}
+.layout {
+    width: 100%;
+  
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  
+    justify-content: center;
+  }
+  .layout img {
+    height: 80px;
+    border-radius: 5px;
+  }
+  .image-gallery h3{
+    text-align: center;
+    font-size: 30px;
+    margin: 10px auto;
+  }
+  .whatsapp {
+            font-size: 50px; /* Increase icon size */
+            color: #25D366; /* WhatsApp green */
+            text-decoration: none; /* Remove underline */
+            position: fixed;
+            bottom: 90px;
+            right: 35px;
+        }
+
+        .whatsapp:hover {
+            color: #1ebe5d; /* Slightly darker green on hover*/
+}
+  

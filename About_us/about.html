@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rospand Global</title>
+    <link rel="icon" type="image/x-icon" href="../../../../../../../../images/logo.png">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait until the navbar is fetched and added to the DOM
+            fetch('/Nav_bar/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+        
+                    // Add active class after navbar is loaded
+                    const navLinks = document.querySelectorAll("header nav a");
+                    const currentPath = window.location.pathname;
+        
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPath || link.getAttribute("href") === currentPath.split('/').pop()) {
+                            link.classList.add("active");
+                        }
+                    });
+                });
+        });
+        
+    </script>
+
+    <main>
+        <div class="about-content">
+            <!-- Left Section: About Text -->
+            <div class="about-text">
+                <h1>About Us</h1>
+                <p>At Rospand Global Techno Services Pvt. Ltd., we take pride in being a multifaceted organization with
+                    over 20 years of excellence and expertise across diverse industries. Our commitment to quality and
+                    innovation drives our success in three dynamic sectors: <br><br>
+                    <strong>Agro Products:</strong>Delivering high-quality, sustainable agricultural solutions to meet
+                    the global demand for safe and nutritious food.<br><br>
+                    <strong> Clothing Sector : </strong>Creating versatile and stylish apparel that blends quality
+                    craftsmanship with contemporary trends.<br><br>
+                    <strong> IT Services: </strong>Offering cutting-edge technology solutions, from software development
+                    to IT consulting, to empower businesses worldwide.<br><br>
+                    At Rospand Global Techno Services Pvt. Ltd., we don't just provide services – we deliver value,
+                    drive progress, and inspire trust across industries. Together, we shape a better future for
+                    businesses and communities around the world.
+                </p>
+            </div>
+
+            <div class="right">
+                <img src="../../../../../../../../images/about.jpg" alt="">
+            </div>
+
+        </div>
+
+
+        <!-- Right Section: Image Cards -->
+        <div class="about-sections">
+            <div>
+                <h2>Our Bussinesses</h2>
+            </div>
+            <!-- First Row -->
+            <div class="row">
+                <div class="scard">
+                    <a href="../../../../../../../../Fastion/fashion.html">
+                        <img src="../../../../../../../../images/clothes.jpg" alt="Fashion">
+                        <h3>Fashion</h3>
+                    </a>
+                </div>
+                <div class="scard">
+                    <a href="../../../../../../../../Agro_product/agro.html">
+                        <img src="../../../../../../../../images/agro.jpg" alt="Agro">
+                        <h3>Agro</h3>
+                    </a>
+                </div>
+                <div class="scard">
+                    <a href="../../../../../../../../IT_services/itbpo-services.html">
+                        <img src="../../../../../../../../images/it back (1).jpg" alt="Agro">
+                        <h3>IT Services and BPO</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="ourteam1">
+                <div class="description">
+                    <h2>OUR TEAM</h2>
+                    <p>Meet the experts behind Rospand Global Techno Services Pvt. Ltd. Together, we drive our success and innovation across multiple industries.</p>
+                </div>
+
+                <!-- First Row -->
+                <div class="post1">
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="../../../../../../../../images/sandeep sir.jpg" alt="Profile Picture" class="card__image">
+                        </div>
+                        <div class="card__body">
+                            <h2 class="card__name">Mr. Sandeep Katre</h2>
+                            <p class="card__bio">Sr. Manager</p>
+                            <a href="#" class="card__button">Contact: +91 8668622470</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="../../../../../../../../images/justin sir.jpg" alt="Profile Picture" class="card__image">
+                        </div>
+                        <div class="card__body">
+                            <h2 class="card__name">Mr. Justin Anthony</h2>
+                            <p class="card__bio">BPO Manager</p>
+                            <a href="#" class="card__button">Contact: +91 8329196598</a>
+                        </div>
+                    </div>  
+                </div>
+            
+                <!-- Second Row -->
+                <div class="post2">
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="../../../../../../../../images/sanskruti.jpg" alt="Profile Picture" class="card__image">
+                        </div>
+                        <div class="card__body">
+                            <h2 class="card__name">Ms. Sanskruti Shambharkar</h2>
+                            <p class="card__bio">Assistant Manager (Projects)</p>
+                            <a href="#" class="card__button">Contact: +91 9356544964</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="../../../../../../../../images/pratham.jpg" alt="Profile Picture" class="card__image">
+                        </div>
+                        <div class="card__body">
+                            <h2 class="card__name">Mr. Pratham Gaidhane</h2>
+                            <p class="card__bio">Developer & Sales Executive</p>
+                            <a href="#" class="card__button">Contact: +91 9309751749</a>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <a href="https://wa.me/918421148095" target="_blank" class="whatsapp">
+         <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+
+          
+    </main>
+    <div id="footercontent"></div>
+    <script>
+        // Load footer dynamically
+        function loadFooter() {
+            fetch('/Footer/footer.html') // Update path as needed
+                .then((response) => response.text())
+                .then((footerHTML) => {
+                    document.getElementById('footercontent').innerHTML = footerHTML;
+                })
+                .catch((error) => console.error('Error loading footer:', error));
+        }
+
+        // Call the function to load the footer
+        loadFooter();
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <script src="../../../../../../../../tawk.to/chat.js"></script>
+</body>
+
+</html>

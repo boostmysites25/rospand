@@ -1,0 +1,280 @@
+﻿/* Reset default margin and padding */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;0,900;1,100;1,200;1,300;1,400;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;  
+}
+
+html, body {
+    background-color: #fbe9d0;
+    height: 100%; /* Ensure full height of the viewport */
+}
+
+/* Main Content Styling */
+main {
+    flex-grow: 1; /* Ensures content takes up remaining space */
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+main p {
+    color: #333;
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* Branches Section */
+.branch-with-map, .branch {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.branch-with-map h2, .branch h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #244455;
+}
+
+.row1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.branch {
+    width: 581px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.branch:hover {
+    transform: translateY(-10px); /* Moves the branch slightly upward */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhances the shadow effect for hover */
+}
+
+/* Uniform Image Styles */
+.flag-icon {
+    width: 90px;
+    border-radius: 5px;
+    object-fit: cover; /* Ensures images maintain aspect ratio while fitting into the defined size */
+    flex-shrink: 0; /* Prevents shrinking of the image */
+}
+
+.branch-details {
+    width: 100%;
+}
+
+.branch-details p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.branch-details i {
+    margin-right: 10px;
+    color: #244455;
+}
+
+.map {
+    width: 1100px;
+}
+
+/* Map Styles */
+.map iframe {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.line {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+}
+
+/* Image gallery */
+.image-gallery{
+    margin: 30px auto;
+}
+.layout {
+    width: 100%;
+  
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  
+    justify-content: center;
+  }
+  .layout img {
+    height: 80px;
+    border-radius: 5px;
+  }
+  .image-gallery h3{
+    text-align: center;
+    font-size: 30px;
+    margin: 10px auto;
+  }
+  
+  
+
+/* Responsive Styles */
+
+/* Tablets (1024px and below) */
+@media (max-width: 1024px) {
+    .branch {
+        width: 400px; /* Maintain a larger width for tablets */
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    .branch-with-map h2 {
+        font-size: 1.5rem;
+    }
+
+    .map iframe {
+        height: 300px;
+    }
+
+    .map {
+        width: 80%; /* Scale map width for tablets */
+    }
+}
+
+/* Large Mobiles (768px and below) */
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro {
+        font-size: 0.9rem;
+    }
+
+    .branch {
+        flex-direction: column; /* Stack branches vertically */
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .branch-details p {
+        font-size: 0.9rem;
+    }
+
+    .flag-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .map iframe {
+        height: 250px;
+    }
+
+    .map {
+        width: 90%; /* Full width for better visibility */
+    }
+}
+
+/* Small Mobiles (480px and below) */
+@media (max-width: 480px) {
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    .intro {
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+    }
+
+    .branch {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .branch img {
+        width: 100%;
+        max-width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .branch-details {
+        width: 100%;
+        text-align: center;
+    }
+
+    .branch-details p {
+        font-size: 0.8rem;
+    }
+
+    .flag-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .map {
+        width: 100%; /* Full width */
+        margin: 0 auto;
+    }
+
+    .map iframe {
+        height: 200px;
+    }
+
+    .line {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.whatsapp {
+            font-size: 50px; /* Increase icon size */
+            color: #25D366; /* WhatsApp green */
+            text-decoration: none; /* Remove underline */
+            position: fixed;
+            bottom: 90px;
+            right: 35px;
+        }
+
+        .whatsapp:hover {
+            color: #1ebe5d; /* Slightly darker green on hover*/
+}

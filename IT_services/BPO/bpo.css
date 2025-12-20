@@ -1,0 +1,358 @@
+﻿/* General Page Styling */
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fbe9d0;
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('../../../../../../../../../images/bpobgg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Section Styles */
+section {
+    margin: 50px 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.customerservice{
+    display: flex;
+    text-align:justify;
+    padding: 40px;
+}
+.description{
+    padding-right: 40px;
+}
+.photo img{
+    border: 6px solid #874f41;
+    border-radius: 4px;
+}
+section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #0074D9;
+}
+.why-choose-us p{
+    text-align:justify;
+    padding-right: 40px;
+}
+.why-choose-us img{
+    border: 6px solid #874f41;
+}
+.why-choose-us{
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    padding: 40px;
+}
+.choose{
+    text-align: center;
+}
+.services{
+    margin-top: 60px;
+}
+.services ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.services h1{
+    text-align: center;
+}
+.services ul, .why-choose-us ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.services li, .why-choose-us li {
+    margin: 10px 0;
+    font-size: 20px;
+}
+.team{
+    display: flex;
+    justify-content: space-evenly;
+}
+.our-team h1{
+    text-align: center;
+}
+.our-team p{
+    text-align: center;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.us img{
+    height: 250px;
+    width: 400px;
+    border: 6px solid #874f41;
+}
+/* Contact Form */
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact form input, 
+.contact form textarea, 
+.contact form button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form button {
+    background-color: #0074D9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #0056a3;
+}
+
+/* Testimonials */
+.testimonials p {
+    margin: 10px 0;
+    font-style: italic;
+    color: #555;
+    border-left: 3px solid #0074D9;
+    padding-left: 10px;
+}
+
+/* Reverse Layout for About IT Services */
+.about-it-services-reverse {
+    padding: 50px 20px;
+    background-color: #fbe9d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content Structure for Reverse Layout */
+.about-it-services-reverse .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between columns */
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Image Section */
+.about-it-services-reverse .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Styling */
+.about-it-services-reverse .image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Section */
+.about-it-services-reverse .text {
+    color: #244455;
+    text-align: justify;
+}
+
+/* Heading Styling */
+.about-it-services-reverse .text h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #874f41;
+}
+
+/* Paragraph Styling */
+.about-it-services-reverse .text p {
+    line-height: 1.6;
+    font-size: 1em;
+    color: #555;
+}
+
+.image img{
+    border: 6px solid #874f41;
+}
+
+
+
+
+
+/* General Adjustments for Tablets (768px to 1024px) */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 100px 15px; /* Slight reduction in padding */
+    }
+
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .customerservice, .why-choose-us {
+        flex-direction: column; /* Stack sections vertically */
+        text-align: center; /* Center-align content */
+    }
+
+    .description{
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+    .description, .photo img, .why-choose-us p, .why-choose-us img {
+        padding: 0;
+    }
+
+    .services ul {
+        flex-direction: column; /* Stack service items */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .services li {
+        margin: 10px auto; /* Center service list items */
+    }
+
+    .team {
+        flex-direction: column;
+        gap: 20px; /* Add spacing between team members */
+    }
+
+    .us img {
+        width: 90%; /* Scale team member images */
+        height: auto;
+    }
+
+    .contact form {
+        width: 100%; /* Full width form for smaller screens */
+    }
+
+    .about-it-services-reverse .content {
+        grid-template-columns: 1fr; /* Stack content vertically */
+    }
+
+    .about-it-services-reverse .image img {
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .team .us{
+        margin-left: 50px;
+    }
+    .our-team p{
+        text-align: justify;
+    }
+    .photo img{
+        margin-top: 20px;
+    }
+    .choose h1{
+        margin: 0 0;
+    }
+    .why-choose-us {
+        margin-top: 0;
+        padding:30px 20px;
+    }
+    .our-team p {
+        padding: 30px 20px;
+    }
+    .customerservice{
+        padding: 20px 20px;
+    }
+    .services ul{
+        font-size: 16px;
+    }
+
+}
+
+/* Adjustments for Mobile Phones (below 768px) */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .why-choose-us img, .customerservice img {
+        max-width: 100%; /* Make images fluid */
+        margin: auto;
+    }
+
+    .services ul {
+        padding-left: 0;
+        gap: 10px;
+    }
+
+    .services li {
+        text-align: center;
+    }
+
+    .team img {
+        width: 80%; /* Adjust team images further */
+        height: auto;
+    }
+
+    .about-it-services-reverse .content {
+        gap: 15px; /* Reduce spacing */
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 5px 0;
+    }
+}
+.whatsapp {
+            font-size: 50px; /* Increase icon size */
+            color: #25D366; /* WhatsApp green */
+            text-decoration: none; /* Remove underline */
+            position: fixed;
+            bottom: 90px;
+            right: 35px;
+        }
+
+        .whatsapp:hover {
+            color: #1ebe5d; /* Slightly darker green on hover*/
+}

@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rospand Global</title>
+    <link rel="icon" type="image/x-icon" href="../../../../../../../../images/logo.png">
+    <link rel="stylesheet" href="branches.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait until the navbar is fetched and added to the DOM
+            fetch('/Nav_bar/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+
+                    // Add active class after navbar is loaded
+                    const navLinks = document.querySelectorAll("header nav a");
+                    const currentPath = window.location.pathname;
+
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPath || link.getAttribute("href") === currentPath.split('/').pop()) {
+                            link.classList.add("active");
+                        }
+                    });
+                });
+        });
+
+    </script>
+    <main>
+        <h1>Our Branches</h1>
+        <p class="intro">Explore our global presence and connect with us at your nearest branch.</p>
+
+        <!-- India Office Section -->
+        <section class="branch-with-map">
+            <div class="row1">
+                <!-- Map in a single row -->
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.5065905489573!2d79.07835127471819!3d21.17202548284357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1000fd0c73d%3A0x4fb01577f53fc63!2sRospand%20Global%20Techno%20Services%20Pvt%20Ltd.!5e0!3m2!1sen!2sin!4v1733212249468!5m2!1sen!2sin"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- India Address in the next row -->
+            <div class="first">
+                <div class="branch">
+                    <img src="../../../../../../../../images/india.jpg" alt="India Flag" class="flag-icon">
+                    <div class="branch-details">
+                        <h2>Corporate Office (India)</h2>
+                        <p><i class="fa-solid fa-phone"></i> +91 8421148095, +91 7758848095</p>
+                        <p><i class="fa-solid fa-location-dot"></i> 106 Suphalam Building Opposite ICAD Institute,
+                            Byramji Town, Nagpur.440013</p>
+                        <p><i class="fa-solid fa-envelope"></i> rospandglobal27@gmail.com, admin@rospand.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="line">
+                <div class="branch">
+                    <img src="../../../../../../../../images/dubai.jpg" alt="India Flag" class="flag-icon">
+                    <div class="branch-details">
+                        <h2>Dubai Office (UAE)</h2>
+                        <p><i class="fa-solid fa-phone"></i> +971 527542126, +91 7758848095</p>
+                        <p><i class="fa-solid fa-location-dot"></i>Rospand Globl Techno Services Pvt Ltd - FZCO<br>
+                            48083-001,A1 Business Park DDP, Silicon Oasis, Dubai, UAE</p>
+                        <p><i class="fa-solid fa-envelope"></i> rospandglobal27@gmail.com, admin@rospand.com</p>
+                    </div>
+                </div>
+                <div class="branch">
+                    <img src="../../../../../../../../images/america.jpg" alt="India Flag" class="flag-icon">
+                    <div class="branch-details">
+                        <h2>America Office (USA)</h2>
+                        <p><i class="fa-solid fa-phone"></i> +91 8421148095, +91 7758848095</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Rospand Global Techno Services Pvt Ltd LLC. <br>
+                            8 The Green Suit A, Dover, Delaware 19901, USA.</p>
+                        <p><i class="fa-solid fa-envelope"></i> rospandglobal27@gmail.com, admin@rospand.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="image-gallery">
+        <h3>Our Membership</h3>
+        <div class="layout">
+            <div class="layout">
+            <div>
+              <img src="../../../../../../../../images/IMAGE_G/ced.jpg" alt="" />
+            </div>
+            <div>
+              <img src="../../../../../../../../images/IMAGE_G/FIEO.png" alt="" />
+            </div>
+            <div>
+              <img src="../../../../../../../../images/IMAGE_G/GCCI.png" alt="" />
+            </div>
+            <div>
+                <img src="../../../../../../../../images/IMAGE_G/RCMS.jpg" alt="" />
+            </div>
+            <div>
+                <img src="../../../../../../../../images/IMAGE_G/IIIEM.png" alt="" />
+            </div>
+            <div>
+                <img src="../../../../../../../../images/IMAGE_G/MSME.png" alt="" />
+            </div>
+            <div>
+                <img src="../../../../../../../../images/IMAGE_G/goimfT_enhanced.jpg" alt="" />
+        </div>
+          </div>
+    </div>
+    </div>
+    <div id="footercontent"></div>
+    <a href="https://wa.me/918421148095" target="_blank" class="whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <script>
+        // Load footer dynamically
+        function loadFooter() {
+            fetch('/Footer/footer.html') // Update path as needed
+                .then((response) => response.text())
+                .then((footerHTML) => {
+                    document.getElementById('footercontent').innerHTML = footerHTML;
+                })
+                .catch((error) => console.error('Error loading footer:', error));
+        }
+
+        // Call the function to load the footer
+        loadFooter();
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <script src="../../../../../../../../tawk.to/chat.js"></script>
+</body>
+</html>

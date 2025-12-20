@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rospand Global</title>
+    <link rel="icon" type="image/x-icon" href="../../../../../../../../images/logo.png">
+    <link rel="stylesheet" href="fashion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait until the navbar is fetched and added to the DOM
+            fetch('/Nav_bar/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+        
+                    // Add active class after navbar is loaded
+                    const navLinks = document.querySelectorAll("header nav a");
+                    const currentPath = window.location.pathname;
+        
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPath || link.getAttribute("href") === currentPath.split('/').pop()) {
+                            link.classList.add("active");
+                        }
+                    });
+                });
+        });
+        
+    </script>
+    <main>
+        <h1>Explore the Categories</h1>
+        <div class="fashion-sections">
+            <!-- Row 1: Men's and Women's Fashion -->
+            <div class="row">
+                <!-- Men's Fashion -->
+                <div class="section">
+                    <h2>Men's Fashion</h2>
+                    <div class="content">
+                        <div class="image">
+                            <a href="../../../../../../../../Fastion/Men/mens-fashion.html">
+                                <img src="../../../../../../../../images/mens (2).jpg" alt="Men's Fashion">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <p>Explore our curated collection of men's clothing, where style meets sophistication. From
+                                casual wear to formal attire, we have everything you need to make a statement.</p>
+                            <p class="quote">"Clothes make the man." – Mark Twain</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Women's Fashion -->
+                <div class="section">
+                    <h2>Women's Fashion</h2>
+                    <div class="content">
+                        <div class="image">
+                            <a href="../../../../../../../../Fastion/Women/womens-fashion.html">
+                                <img src="../../../../../../../../images/women.jpg" alt="Women's Fashion">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <p>Discover the latest trends in women’s fashion. Whether it’s chic, casual, or formal, our
+                                collection is designed to celebrate individuality and elegance.</p>
+                            <p class="quote">"Fashion is not something that exists in dresses only." – Coco Chanel</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- kid's Fashion -->
+                <div class="section">
+                    <h2>Kids' Fashion</h2>
+                    <div class="content">
+                        <div class="image">
+                            <a href="../../../../../../../../Fastion/Kids/kids-fashion.html">
+                                <img src="../../../../../../../../images/kids.jpg" alt="Kids' Fashion">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <p>Stylish and comfortable clothing for kids of all ages. Let them shine with adorable and
+                                trendy outfits that ensure both fun and function.</p>
+                            <p class="quote">"Children see magic because they look for it." – Christopher Moore</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Fabrics</h2>
+                    <div class="content">
+                        <div class="image">
+                            <a href="../../../../../../../../Fastion/Fabrics/fabrics.html">
+                                <img src="../../../../../../../../images/fabrics.jpeg" alt="Fabrics' Fashion" style="width: 100%; height: 200px;">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <p>Soft Crafted for comfort and durability, our materials include lightweight cotton, cozy fleece, and stretchable blends that allow for easy movement and all-day wear.</p>
+                            <p class="quote">"Gentle on delicate skin, ensuring every outfit feels as good as it looks." – Christopher Moore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="fashionbg">
+            <p class="intro">"Fashion is the armor to survive the reality of everyday life." – Bill Cunningham</p>
+        </div>
+
+
+        
+    </main>
+    <div id="footercontent"></div>
+    <a href="https://wa.me/918421148095" target="_blank" class="whatsapp">
+        <i class="fa-brands fa-whatsapp"></i></a>
+    <script>
+        // Load footer dynamically
+        function loadFooter() {
+            fetch('/Footer/footer.html') // Update path as needed
+                .then((response) => response.text())
+                .then((footerHTML) => {
+                    document.getElementById('footercontent').innerHTML = footerHTML;
+                })
+                .catch((error) => console.error('Error loading footer:', error));
+        }
+
+        // Call the function to load the footer
+        loadFooter();
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <script src="../../../../../../../../tawk.to/chat.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Top-notch BPO services for customer support, data entry, and more.">
+    <link rel="stylesheet" href="bpo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Rospand Global</title>
+        <link rel="icon" type="image/x-icon" href="../../../../../../../../../images/logo.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait until the navbar is fetched and added to the DOM
+            fetch('/Nav_bar/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+        
+                    // Add active class after navbar is loaded
+                    const navLinks = document.querySelectorAll("header nav a");
+                    const currentPath = window.location.pathname;
+        
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPath || link.getAttribute("href") === currentPath.split('/').pop()) {
+                            link.classList.add("active");
+                        }
+                    });
+                });
+        });
+        
+    </script>
+
+    <section class="hero">
+        <h1>Welcome to Our BPO Services</h1>
+        <p>Outsource your business processes to us for better efficiency and cost savings.</p>
+    </section>
+
+
+    <div class="main">
+        <div class="services" id="services">
+            <h1>Our Services</h1>
+            <ul>
+                <li>Customer Support</li>
+                <li>Inbound Services</li>
+                <li>Outbound Services</li>
+                <li>Back Office Support</li>
+            </ul>
+        </div>
+        <div class="customerservice">
+            <div class="description">
+                Rospand Global Techno Services specializes in providing top-notch domestic and international call
+                center solutions, tailored to meet the diverse needs of businesses of all sizes. With a focus on
+                delivering exceptional nearshore inbound and outbound procedures, we empower companies to thrive in
+                competitive markets.
+
+                <br><br>
+                Our inbound procedures ensure seamless customer support, from handling inquiries to managing complaints
+                with professionalism and efficiency. Meanwhile, our outbound procedures drive business growth through
+                proactive customer engagement, including lead generation, sales, and follow-ups.
+
+                <br><br>
+                Whether you're a small business aiming to grow or an established enterprise looking to scale, our
+                resources and expertise will give you the edge to excel.
+
+                <br><br>
+
+                At Rospand Global Techno Services, we understand that every business is unique, which is why our
+                inbound and outbound procedures are designed with flexibility and customization in mind. Our team of
+                skilled professionals leverages advanced technologies and proven strategies to ensure your customers
+                receive exceptional service while driving measurable results for your business. From streamlining
+                customer interactions to enhancing brand loyalty, we are committed to being your trusted partner in
+                success.
+
+                <br><br>
+                
+                Ready to elevate your business? Explore our comprehensive range of domestic and international call
+                center services and experience the difference Rospand Global Techno Services can make.
+            </div>
+            <div class="photo">
+                <img src="../../../../../../../../../images/bpobg.jpg" alt="">
+            </div>
+        </div>
+        <div class="choose">
+            <h1>Why Choose Us?</h1>
+        </div>
+        <div class="why-choose-us" id="why-us">
+            <div>
+                <p>At Rospand Global Techno Services, we are dedicated to delivering outstanding Business Process
+                    Outsourcing (BPO) solutions that drive measurable results. Here's why partnering with us is the
+                    right
+                    choice for your business: <br><br>
+
+                    <strong>1. Tailored Solutions :</strong>
+                    We understand that every business is unique. Our customized inbound and outbound services are
+                    designed
+                    to align perfectly with your specific goals and operational needs.
+                    <br><br>
+                    <strong> 2. Expert Team :</strong>
+                    Our team comprises highly skilled professionals with extensive experience in handling both domestic
+                    and
+                    international call operations. We are committed to delivering exceptional customer experiences every
+                    time.
+                    <br><br>
+                    <strong>3. Cost-Effective Services :</strong>
+                    Get top-tier quality without breaking the bank. We help you reduce operational costs while
+                    maintaining
+                    excellent service standards.
+                    <br><br>
+                    <strong>4. Cutting-Edge Technology :</strong>
+                    We leverage the latest tools and technologies to ensure seamless communication, efficient workflows,
+                    and
+                    optimal performance for your business processes.
+                    <br><br>
+                    <strong>5. Scalability :</strong>
+                    Whether you're a growing startup or an established enterprise, our services are scalable to meet
+                    your
+                    evolving business demands.
+                    <br><br>
+                    <strong>6. 24/7 Support :</strong>
+                    We operate around the clock, ensuring your customers are attended to promptly, no matter the time
+                    zone
+                    or market.
+                    <br><br>
+                    <strong>7. Proven Track Record:</strong>
+                    With a history of successful partnerships, we have earned a reputation for reliability,
+                    professionalism,
+                    and consistent delivery of results.
+                    <br><br>
+                </p>
+            </div>
+            <div><img src="../../../../../../../../../images/BPO.jpg" alt=""></div>
+        </div>
+
+
+        <div class="our-team">
+            <div>
+                <h1>Our Team</h1>
+            </div>
+            <div class="team">
+                <div class="us"><img src="../../../../../../../../../images/team1.jpg" alt=""></div>
+                <div class="us"><img src="../../../../../../../../../images/WhatsApp Image 2024-11-25 at 15.36.44_d868b818.jpg" alt=""></div>
+                <div class="us"><img src="../../../../../../../../../images/WhatsApp Image 2024-11-25 at 15.36.44_d83de9df.jpg" alt=""></div>
+            </div>
+            <div >
+                <p class="bpo-text">At Rospand Global Techno Services, our team is a dynamic group of experienced professionals
+                    dedicated to delivering exceptional results. With expertise in BPO operations, customer service, and
+                    process optimization, we bring a customer-focused approach to every project. Our team thrives on
+                    collaboration and adaptability, ensuring seamless solutions tailored to your unique needs. Combining
+                    technical skills with a passion for excellence, we handle inbound and outbound call services,
+                    technical support, and more with precision and care. At the heart of our success is a shared
+                    commitment to helping your business grow, making us not just service providers but true partners in
+                    your journey to success.</p>
+            </div>
+        </div>
+
+
+        <!-- Another About IT Services Section -->
+        <div class="about-it-services-reverse">
+            <div class="content">
+                <div class="image">
+                    <img src="../../../../../../../../../images/justin sir.jpg" alt="IT Solutions Image">
+                </div>
+                <div class="text">
+                    <h2> Mr. Justin Anthony (BPO Manager)</h2>
+                    <h4><i class="fa-solid fa-phone"></i> +91 8329196598 <br> <i class="fa-solid fa-envelope"></i>
+                        justinrospand@outlook.com</h4>
+
+                    <p class="bpo-text">
+                        Our BPO Manager is dedicated to providing expert guidance and support to the entire BPO team,
+                        ensuring seamless operations and fostering a high-performance work environment. With a keen
+                        focus on efficiency and customer satisfaction, the BPO Manager helps drive team performance,
+                        streamline processes, and implement best practices. If you're looking to accelerate the growth
+                        of your business and secure a leading position in the market, connecting with our BPO Manager is
+                        the key to unlocking your potential. Let us help you scale and succeed with our tailored BPO
+                        solutions. <br>
+                        If you are looking for job opportunities in the BPO sector, feel free to connect with BPO Manager
+                        on LinkedIn or reach out via email. we happy to assist you with any job-related queries or
+                        provide guidance in your career search. Don't hesitate to get in touch! </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <a href="https://wa.me/918421148095" target="_blank" class="whatsapp">
+        <i class="fa-brands fa-whatsapp"></i></a>
+    <div id="footercontent"></div>
+    
+    <script>
+        // Load footer dynamically
+        function loadFooter() {
+            fetch('/Footer/footer.html') // Update path as needed
+                .then((response) => response.text())
+                .then((footerHTML) => {
+                    document.getElementById('footercontent').innerHTML = footerHTML;
+                })
+                .catch((error) => console.error('Error loading footer:', error));
+        }
+
+        // Call the function to load the footer
+        loadFooter();
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        
+    </script>
+    <script src="../../../../../../../../../tawk.to/chat.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rospand Global</title>
+    <link rel="icon" type="image/x-icon" href="../../../../../../../../../images/logo.png">
+    <link rel="stylesheet" href="it.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait until the navbar is fetched and added to the DOM
+            fetch('/Nav_bar/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+        
+                    // Add active class after navbar is loaded
+                    const navLinks = document.querySelectorAll("header nav a");
+                    const currentPath = window.location.pathname;
+        
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPath || link.getAttribute("href") === currentPath.split('/').pop()) {
+                            link.classList.add("active");
+                        }
+                    });
+                });
+        });
+        
+    </script>
+    <!-- IT Services Section -->
+    <main>
+        <div class="services-section">
+            <h1>Our Services</h1>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="../../../../../../../../../images/v1.jpg" alt="eCommerce Development">
+                    <h3>ECommerce Development</h3>
+                </div>
+                <div class="service-card">
+                    <img src="../../../../../../../../../images/v2.gif" alt="Website Designing">
+                    <h3>Website Designing & Development</h3>
+                </div>
+                <div class="service-card">
+                    <img src="../../../../../../../../../images/v3.gif" alt="App Development">
+                    <h3>App Development</h3>
+                </div>
+                <div class="service-card">
+                    <img src="../../../../../../../../../images/v4.gif" alt="Hosting & Domain">
+                    <h3>Hosting & Domain Name Registration</h3>
+                </div>
+                <div class="service-card">
+                    <img src="../../../../../../../../../images/v5.gif" alt="SEO">
+                    <h3>Search Engine Optimization</h3>
+                </div>
+                <div class="service-card">
+                    <img src="../../../../../../../../../images/v6.gif" alt="Social Media Marketing">
+                    <h3>Social Media Marketing</h3>
+                </div>
+                <div class="service-card">
+                    <img src="../../../../../../../../../images/v7.jpg" alt="Lead Extraction">
+                    <h3>Lead Extraction</h3>
+                </div>
+                <div class="service-card">
+                    <img src="../../../../../../../../../images/v8.gif" alt="Email Marketing">
+                    <h3>Email Marketing</h3>
+                </div>
+                <div class="service-card">
+                    <img src="../../../../../../../../../images/v9.gif" alt="SMS Marketing">
+                    <h3>SMS Marketing</h3>
+                </div>
+                <div class="service-card">
+                    <img src="../../../../../../../../../images/v10.gif" alt="Cloud Computing">
+                    <h3>Cloud Computing</h3>
+                </div>
+                <div class="service-card">
+                    <img src="../../../../../../../../../images/v11.gif" alt="Business Automation">
+                    <h3>Business Automation</h3>
+                </div>
+                <div class="service-card">
+                    <img src="../../../../../../../../../images/v12.gif" alt="Sales & Services">
+                    <h3>Sales & Services</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Technologies Section -->
+        <div class="technologies-section">
+            <h1>Technologies We Work On</h1>
+            <div class="technologies-grid">
+                <!-- Row 1 -->
+                <div class="technology-card">
+                    <div class="tech-image">
+                        <img src="../../../../../../../../../images/t1.jpg" alt="PHP Development">
+                    </div>
+                    <h3>PHP Development</h3>
+                </div>
+                <div class="technology-card">
+                    <div class="tech-image">
+                        <img src="../../../../../../../../../images/t2.jpg" alt="Laravel Development">
+                    </div>
+                    <h3>Python Development</h3>
+                </div>
+                <div class="technology-card">
+                    <div class="tech-image">
+                        <img src="../../../../../../../../../images/t3.jpg" alt="CodeIgniter Development">
+                    </div>
+                    <h3>Cloud Computing</h3>
+                </div>
+                <div class="technology-card">
+                    <div class="tech-image">
+                        <img src="../../../../../../../../../images/t4.jpg" alt="WordPress Development">
+                    </div>
+                    <h3>WordPress Development</h3>
+                </div>
+                <!-- Row 2 -->
+                <div class="technology-card">
+                    <div class="tech-image">
+                        <img src="../../../../../../../../../images/t5.jpg" alt="WooCommerce Development">
+                    </div>
+                    <h3>Javascript Development</h3>
+                </div>
+                <div class="technology-card">
+                    <div class="tech-image">
+                        <img src="../../../../../../../../../images/t6.jpg" alt="Magento Development">
+                    </div>
+                    <h3>networking</h3>
+                </div>
+                <div class="technology-card">
+                    <div class="tech-image">
+                        <img src="../../../../../../../../../images/t7.jpg" alt="Bootstrap Development">
+                    </div>
+                    <h3>Bootstrap Development</h3>
+                </div>
+                <div class="technology-card">
+                    <div class="tech-image">
+                        <img src="../../../../../../../../../images/t8.jpg" alt="Java Development">
+                    </div>
+                    <h3>Java Development</h3>
+                </div>
+                <!-- Row 3 -->
+                <div class="technology-card">
+                    <div class="tech-image">
+                        <img src="../../../../../../../../../images/t9.jpg" alt="React Development">
+                    </div>
+                    <h3>React Development</h3>
+                </div>
+                <div class="technology-card">
+                    <div class="tech-image">
+                        <img src="../../../../../../../../../images/t10.jpg" alt="Angular Development">
+                    </div>
+                    <h3>Angular Development</h3>
+                </div>
+                <div class="technology-card">
+                    <div class="tech-image">
+                        <img src="../../../../../../../../../images/t11.jpg" alt="Vue.js Development">
+                    </div>
+                    <h3>app Development</h3>
+                </div>
+                <div class="technology-card">
+                    <div class="tech-image">
+                        <img src="../../../../../../../../../images/t12.jpg" alt="Node.js Development">
+                    </div>
+                    <h3>Node.js Development</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- About IT Services Section -->
+        <div class="about-it-services">
+            <div class="content">
+                <div class="text">
+                    <h2>About Our IT Services</h2>
+                    <p>
+                        At Rospand Global Techno Services, we pride ourselves on delivering high-quality IT solutions
+                        tailored to the unique needs of our clients. Whether working with large enterprises or small
+                        businesses, we are committed to providing exceptional services that drive innovation and
+                        efficiency. Our team ensures seamless project execution with a focus on precision, quality, and
+                        timely delivery. Additionally, we offer 24/7 support to ensure uninterrupted operations and
+                        customer satisfaction. By leveraging the latest technologies and a client-centric approach, we
+                        build lasting partnerships that empower businesses to achieve their goals. <br><br>
+                        With a diverse set of skills and expertise in various IT domains, Rospand Global Techno
+                        Services is equipped to provide comprehensive solutions for all your business needs. Our team
+                        excels in identifying challenges and offering innovative, efficient solutions that enhance
+                        operational performance and drive business growth. Whether it's streamlining workflows,
+                        implementing advanced technologies, or optimizing existing systems, we ensure that your business
+                        stays ahead of the curve. Our commitment to excellence and problem-solving ensures that we are
+                        always ready to support your business in achieving success at every stage.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="../../../../../../../../../images/services.jpg" alt="About IT Services">
+                </div>
+            </div>
+        </div>
+
+        <!-- Another About IT Services Section -->
+        <div class="about-it-services-reverse">
+            <div class="content">
+                <div class="image">
+                    <img src="../../../../../../../../../images/sanskruti.jpg" alt="IT Solutions Image">
+                </div>
+                <div class="text">
+                    <h2>Project Lead & Assistant Manager <br>Ms. Sanskruti Shambharkar</h2>
+                    <h4><i class="fa-solid fa-phone"></i> 9356544964 <br> <i class="fa-solid fa-envelope"></i>
+                        sanskrutirospand@gmail.com <br><i class="fa-brands fa-linkedin"></i> <a
+                            href="https://www.linkedin.com/in/sanskruti-shambharkar-39439a248?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Connect
+                            on LinkedIn</a> </h4>
+
+                    <p>
+                        If you have any queries or need assistance, feel free to connect with us. We are here to help
+                        and provide support for any questions you may have, whether they are technical in nature or
+                        related to your website. Don't hesitate to reach out, and we'll be happy to assist you in
+                        finding the best solutions. Your satisfaction is our priority! <br><br>
+                        If you are looking for job opportunities in the IT or BPO sectors, feel free to connect with me
+                        on LinkedIn or reach out via email. I'm happy to assist you with any job-related queries or
+                        provide guidance in your career search. Don't hesitate to get in touch! </p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+    <a href="https://wa.me/918421148095" target="_blank" class="whatsapp">
+        <i class="fa-brands fa-whatsapp"></i></a>
+    <div id="footercontent"></div>
+
+    <script>
+        // Load footer dynamically
+        function loadFooter() {
+            fetch('/Footer/footer.html') // Update path as needed
+                .then((response) => response.text())
+                .then((footerHTML) => {
+                    document.getElementById('footercontent').innerHTML = footerHTML;
+                })
+                .catch((error) => console.error('Error loading footer:', error));
+        }
+
+        // Call the function to load the footer
+        loadFooter();
+    </script>
+    <script src="../../../../../../../../../tawk.to/chat.js"></script>
+</body>
+
+</html>

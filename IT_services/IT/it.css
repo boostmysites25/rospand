@@ -1,0 +1,272 @@
+﻿/* General Page Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;0,900;1,100;1,200;1,300;1,400;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;   
+}
+body {
+    background-color: #fbe9d0;
+}
+
+/* Sticky Navigation */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #244455;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+header nav a:hover {
+    background-color: #874f41;
+    border-radius: 5px;
+}
+
+/* Services Section */
+.services-section {
+    padding: 50px 50px;
+}
+
+.services-section h1 {
+    text-align: center;
+    color: #244455;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background-color: #874f41;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.service-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: white;
+}
+
+/* Technologies Section */
+.technologies-section {
+    padding: 50px 20px;
+    background-color: #fbe9d0;
+}
+
+.technologies-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #244455;
+}
+
+.technologies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+    gap: 20px;
+}
+
+.technology-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.tech-image {
+    width: 111px;
+    height: 111px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #244455;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tech-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.technology-card h3 {
+    font-size: 1.2em;
+    color: #244455;
+    text-transform: uppercase;
+}
+.text h2{
+    color: #874f41;
+}
+.text p{
+    font-size: 16px;
+}
+
+/* About IT Services Section */
+.about-it-services,
+.about-it-services-reverse {
+    padding: 50px 20px;
+    background-color: #fbe9d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-it-services .content,
+.about-it-services-reverse .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.about-it-services .text,
+.about-it-services-reverse .text {
+    flex: 1;
+    text-align: justify;
+}
+
+.about-it-services .image img,
+.about-it-services-reverse .image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .services-section h1,
+    .technologies-section h1 {
+        font-size: 2rem;
+    }
+
+    .service-card img,
+    .tech-image img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .about-it-services h2,
+    .about-it-services-reverse h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-it-services .text,
+    .about-it-services-reverse .text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid,
+    .technologies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .services-section h1,
+    .technologies-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .service-card h3,
+    .technology-card h3 {
+        font-size: 1rem;
+    }
+
+    .about-it-services .text,
+    .about-it-services-reverse .text {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-section h1,
+    .technologies-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .service-card h3,
+    .technology-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .service-card img,
+    .tech-image img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .about-it-services h2,
+    .about-it-services-reverse h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-it-services .text,
+    .about-it-services-reverse .text {
+        font-size: 0.9rem;
+    }
+}
+.whatsapp {
+            font-size: 50px; /* Increase icon size */
+            color: #25D366; /* WhatsApp green */
+            text-decoration: none; /* Remove underline */
+            position: fixed;
+            bottom: 90px;
+            right: 35px;
+        }
+
+        .whatsapp:hover {
+            color: #1ebe5d; /* Slightly darker green on hover*/
+}
